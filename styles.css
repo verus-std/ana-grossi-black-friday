@@ -18,8 +18,8 @@ a{color:inherit;text-decoration:none}
 .countdown__colon{font-size:18px;align-self:flex-start;line-height:22px;opacity:.7}
 .hero{position:relative;min-height:750px;color:#fff;overflow:hidden;background:var(--wine-deep)}
 .hero__image,.hero__shade{position:absolute;inset:0}
-.hero__image{background-image:url('assets/atelie-ballet.jpg');background-size:cover;background-position:center 42%;filter:saturate(.62)}
-.hero__shade{background:linear-gradient(90deg,rgba(28,11,17,.98) 0%,rgba(33,13,19,.92) 30%,rgba(37,15,21,.64) 54%,rgba(30,15,17,.19) 100%),linear-gradient(0deg,rgba(24,9,14,.42),transparent 35%)}
+.hero__image{background-image:url('assets/hero-ana.jpg');background-size:cover;background-position:center center}
+.hero__shade{background:linear-gradient(90deg,rgba(24,6,10,.46) 0%,rgba(28,7,13,.25) 41%,transparent 72%),linear-gradient(0deg,rgba(20,4,9,.32),transparent 32%)}
 .hero__inner{position:relative;min-height:750px;padding-top:40px;padding-bottom:75px;display:flex;flex-direction:column;align-items:flex-start}
 .brand{display:inline-flex;align-items:center;gap:11px;color:#fff}
 .brand__mark{width:39px;height:39px;display:grid;place-items:center;border:1px solid currentColor;border-radius:50%;font:italic 16px var(--font-head);letter-spacing:-.12em;padding-right:3px}
@@ -98,14 +98,26 @@ a{color:inherit;text-decoration:none}
 .course-card__price s{font-weight:700;color:#a09a98;white-space:nowrap}
 .library__cta{border-top:1px solid #cdbfb5;margin-top:42px;padding-top:30px;display:flex;align-items:center;justify-content:space-between;gap:25px}
 .library__cta p{font:400 23px/1.3 var(--font-head);max-width:450px;margin:0}
-.about{background:var(--paper)}
-.about__grid{display:grid;grid-template-columns:1fr .93fr;gap:95px;align-items:center}
-.about__visual{position:relative;min-height:595px;background:#e6d0bc}
-.about__visual img{display:block;width:100%;height:595px;object-fit:cover;object-position:51% center}
-.about__caption{position:absolute;right:-24px;bottom:-21px;padding:17px 25px;background:var(--wine);color:var(--gold-light);font:italic 20px var(--font-head);box-shadow:0 10px 25px #2c1b2025}
-.about h2{margin-bottom:27px}
+.about{background:#f1ece8}
+.about__panel{background:var(--paper);border:1px solid #ded2c8;border-radius:20px;overflow:hidden}
+.about__header{padding:29px 47px;display:flex;justify-content:space-between;align-items:center;gap:20px;border-bottom:1px solid #e6dad1}
+.about__header .eyebrow{font-size:9px;margin-bottom:5px}
+.about__header h2{font-size:32px;line-height:1.2}
+.about__identity{display:flex;align-items:center;gap:11px;color:#6e5c5e}
+.about__identity img{width:50px;height:50px;object-fit:cover;object-position:center 23%;border-radius:50%}
+.about__identity strong,.about__identity small{display:block}
+.about__identity strong{font-size:12px;color:var(--ink)}
+.about__identity small{font-size:10px;margin-top:3px}
+.about__grid{padding:39px 47px 25px;display:grid;grid-template-columns:1.06fr .94fr;gap:44px;align-items:start}
+.about__photos{display:grid;grid-template-columns:.54fr 1fr;gap:13px;min-height:565px}
+.about__photo{display:block;width:100%;height:565px;object-fit:cover;border-radius:10px}
+.about__photo--portrait{object-position:47% 25%}
+.about__photo--work{object-position:50% 22%}
+.about__copy h3{font:400 clamp(37px,3.5vw,54px)/1.13 var(--font-head);letter-spacing:-.043em;margin:0 0 28px}
+.about__copy h3 em{color:#9d6e64}
 .about__copy>p:not(.eyebrow){font-size:15px;line-height:1.8;color:#63575a;margin:0 0 16px}
 .about__copy strong{color:var(--wine)}
+.about__footer{display:flex;justify-content:center;padding:4px 47px 42px}
 .final-cta{background:radial-gradient(circle at 80% 20%,#65303f,transparent 45%),var(--wine-deep);text-align:center;color:#fff}
 .final-cta__inner{max-width:760px}
 .final-cta h2{font-size:clamp(42px,4.8vw,68px);margin-bottom:20px}
@@ -132,14 +144,31 @@ a{color:inherit;text-decoration:none}
 .thanks-page{background:var(--wine-deep)}
 .thanks{min-height:100svh;position:relative;overflow:hidden;color:#fff}
 .thanks__image,.thanks__shade{position:absolute;inset:0}
-.thanks__image{background:url('assets/atelie-ballet.jpg') center/cover}
+.thanks__image{background:url('assets/hero-ana.jpg') center/cover}
 .thanks__shade{background:linear-gradient(90deg,#231318f5 0%,#231318d9 49%,#23131873 100%)}
 .thanks__inner{position:relative;min-height:100svh;display:flex;align-items:flex-start;flex-direction:column;padding-block:40px 80px}
 .thanks__content{max-width:640px;margin:auto 0}
 .thanks h1{font:400 clamp(46px,5vw,75px)/1.14 var(--font-head);letter-spacing:-.045em;margin:0 0 22px}
 .thanks__content>p:not(.eyebrow){font-size:17px;line-height:1.65;max-width:560px;color:#e8dcdb}
 .thanks__notice{max-width:570px;padding:18px 20px;margin:25px 0;background:#fff1;border-left:2px solid var(--gold);font-size:13px;line-height:1.6;color:#e9d5d1}
-@media(max-width:1000px){.offer__grid{gap:50px}.about__grid{gap:50px}.course-grid{grid-template-columns:repeat(2,1fr)}.course-card{min-height:290px}.intro__grid{gap:45px}}
-@media(max-width:700px){.shell{width:min(100% - 38px,1200px)}.section{padding:75px 0}.announcement__inner{min-height:70px;gap:9px;flex-direction:column;padding:8px 0}.announcement__label{font-size:9px}.countdown__item strong{font-size:17px}.countdown__item small{font-size:8px}.countdown__colon{font-size:14px}.hero,.hero__inner{min-height:750px}.hero__image{background-position:62% center}.hero__shade{background:linear-gradient(90deg,#1c0b11f5,#231018b3 65%,#23101891),linear-gradient(0deg,#1c0b11c9,transparent 55%)}.hero__inner{padding-top:25px;padding-bottom:56px}.hero__content{padding-top:92px}.hero__edition{font-size:11px}.hero h1{font-size:clamp(48px,11vw,67px)}.hero__lifetime{font-size:9px;margin-left:5px}.hero__lead{font-size:15px}.hero__support{font-size:13px}.hero__side-note{display:none}.hero .button{width:100%;gap:15px}.intro__grid,.offer__grid,.about__grid{grid-template-columns:1fr;gap:36px}.intro__body>p{font-size:17px}.intro__stat strong{font-size:65px}.offer-card{padding:32px 25px;box-shadow:12px 12px 0 rgba(181,134,101,.17)}.offer-card h3{font-size:33px}.library__head{display:block;margin-bottom:30px}.library__head>p{margin-top:20px;font-size:14px}.course-grid{grid-template-columns:1fr 1fr;gap:10px}.course-card{padding:19px;min-height:300px}.course-card h3{font-size:19px}.library__cta{display:block}.library__cta p{margin-bottom:20px}.library__cta .button{width:100%;gap:10px}.about__visual,.about__visual img{min-height:400px;height:400px}.about__caption{right:-8px;bottom:-14px;font-size:17px;padding:12px 17px}.footer__inner{padding:26px 0;flex-direction:column;text-align:center;gap:20px}.final-cta .button{width:100%;gap:10px}.modal__panel{padding:36px 25px 25px}.modal__panel h2{font-size:34px}}
+@media(max-width:1000px){.offer__grid{gap:50px}.about__grid{gap:28px;padding:32px}.about__header{padding-inline:32px}.about__photos,.about__photo{min-height:520px;height:520px}.about__copy>p:not(.eyebrow){font-size:14px}.course-grid{grid-template-columns:repeat(2,1fr)}.course-card{min-height:290px}.intro__grid{gap:45px}}
+@media(max-width:700px){.shell{width:min(100% - 38px,1200px)}.section{padding:75px 0}.announcement__inner{min-height:70px;gap:9px;flex-direction:column;padding:8px 0}.announcement__label{font-size:9px}.countdown__item strong{font-size:17px}.countdown__item small{font-size:8px}.countdown__colon{font-size:14px}.hero__inner{padding-top:25px}.hero__edition{font-size:11px}.hero h1{font-size:clamp(48px,11vw,67px)}.hero__lifetime{font-size:9px;margin-left:5px}.hero__lead{font-size:15px}.hero__support{font-size:13px}.hero__side-note{display:none}.hero .button{width:100%;gap:15px}.intro__grid,.offer__grid{grid-template-columns:1fr;gap:36px}.intro__body>p{font-size:17px}.intro__stat strong{font-size:65px}.offer-card{padding:32px 25px;box-shadow:12px 12px 0 rgba(181,134,101,.17)}.offer-card h3{font-size:33px}.library__head{display:block;margin-bottom:30px}.library__head>p{margin-top:20px;font-size:14px}.course-grid{grid-template-columns:1fr 1fr;gap:10px}.course-card{padding:19px;min-height:300px}.course-card h3{font-size:19px}.library__cta{display:block}.library__cta p{margin-bottom:20px}.library__cta .button{width:100%;gap:10px}.footer__inner{padding:26px 0;flex-direction:column;text-align:center;gap:20px}.final-cta .button{width:100%;gap:10px}.modal__panel{padding:36px 25px 25px}.modal__panel h2{font-size:34px}}
 @media(max-width:480px){.course-grid{grid-template-columns:1fr}.course-card{min-height:0}.course-card__icon{margin:10px 0}.course-card h3{font-size:22px}.course-card__price{margin-top:15px}.hero h1{font-size:clamp(45px,11vw,54px)}.hero__lifetime{display:table;margin:14px 0 0}.price-line{font-size:11px}.brand__name{font-size:13px}.brand__name small{font-size:6px}.brand__mark{width:34px;height:34px}}
+@media(max-width:700px){
+  .hero,.hero__inner{min-height:0}
+  .hero__inner{padding-bottom:58px}
+  .hero__image{background-size:auto 430px;background-position:69% top;background-repeat:no-repeat}
+  .hero__shade{background:linear-gradient(180deg,rgba(20,4,9,.12) 0%,rgba(20,4,9,.08) 23%,#1c0b11 410px),linear-gradient(90deg,rgba(20,4,9,.45),transparent 75%)}
+  .hero__content{margin-top:0;padding-top:275px}
+  .about__header{padding:22px;gap:12px}
+  .about__header h2{font-size:27px}
+  .about__identity img{width:43px;height:43px}
+  .about__identity small{display:none}
+  .about__grid{grid-template-columns:1fr;padding:20px 20px 8px;gap:30px}
+  .about__photos{grid-template-columns:.54fr 1fr;gap:9px;min-height:0;height:385px}
+  .about__photo{min-height:0;height:385px}
+  .about__copy h3{font-size:clamp(38px,8vw,48px);margin-bottom:21px}
+  .about__footer{padding:5px 20px 30px}
+  .about__footer .button{width:100%}
+}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
