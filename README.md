@@ -1,6 +1,8 @@
 # Protótipo — Black Friday Ana Grossi
 
-Página estática em HTML/CSS/JavaScript. `index.html` é a página de captura; `obrigado.html` mostra a próxima etapa visual. O formulário não envia nem armazena dados. O botão do grupo de WhatsApp e a integração de captação dependem do link e da plataforma finais.
+Página estática em HTML/CSS/JavaScript. `index.html` é a página de captura; `obrigado.html` apresenta a etapa do WhatsApp e a biografia da Ana, sem vídeo. O formulário não envia nem armazena dados. A integração de captação depende da plataforma final.
+
+O convite do WhatsApp deve ser preenchido na constante `whatsappGroupUrl` em `obrigado.js`. Enquanto o link não estiver disponível, os botões abrem um aviso de que o grupo será liberado em breve.
 
 ## Conteúdo provisório
 
