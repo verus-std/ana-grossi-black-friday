@@ -354,3 +354,71 @@ a{color:inherit;text-decoration:none}
   .price-line--special strong{font-size:24px}
   .campaign-logo__name{font-size:17px}
 }
+
+/* Layout revised in the local Figma file. */
+.event-logo{display:block;max-width:100%;height:auto;object-fit:contain}
+.capture-page .hero,.capture-page .hero__inner{min-height:999px}
+.capture-page .hero__inner{padding-block:124px 208px}
+.capture-page .hero__content{width:641px;max-width:57%;margin:0;padding:0;display:flex;flex-direction:column;gap:31px}
+.hero__identity{display:flex;flex-direction:column;align-items:flex-start;gap:40px}
+.capture-page .hero__event{min-height:51px;margin:0}
+.capture-page .hero__event small{margin-top:7px}
+.capture-page .hero h1.hero__lead{font:400 39px/1.2 Manrope,sans-serif;letter-spacing:0;max-width:none;margin:0;color:#f4ece8}
+.hero__lead strong{display:block;font-weight:700;color:var(--lime)}
+.capture-page .hero__support{width:641px;max-width:100%;padding:3px 0 4px 27px;margin:0;border-left-width:4px;font-size:28.28px;line-height:31.6px}
+.capture-page .hero__support .hero__forever{font-size:36.37px;line-height:47.3px;margin-top:10px}
+.hero__action{width:422px;max-width:100%;text-align:center}
+.capture-page .hero .button{width:100%;min-height:64px;border-radius:81px;padding:18px 25px;gap:12px;font-size:24px;letter-spacing:-.07em;line-height:1.1;box-shadow:0 4px 39.2px #ffffff40}
+.capture-page .hero .button span{font-size:27px;font-weight:800}
+.capture-page .hero__hint{margin:9px 0 0;font-size:15px;line-height:20px;letter-spacing:.03em}
+.section-divider{position:absolute;left:0;width:100%;height:auto;aspect-ratio:1920 / 115;background:var(--paper);mask:url('assets/divisor.svg') center/100% 100% no-repeat;-webkit-mask:url('assets/divisor.svg') center/100% 100% no-repeat;pointer-events:none;z-index:1}
+.section-divider--hero{bottom:-1px}
+.section-divider--offer-top{top:-1px;transform:rotate(180deg)}
+.section-divider--offer-bottom{bottom:-1px;background:#f7f2eb}
+.capture-page .offer{padding-block:115px}
+.capture-page .intro h2,.capture-page .offer h2,.capture-page .library h2,.capture-page .about__copy h3,.capture-page .final-cta h2{font-family:Manrope,sans-serif;font-weight:700;font-style:normal}
+.capture-page .intro h2,.capture-page .library h2,.capture-page .about__copy h3{letter-spacing:-.07em}
+.capture-page .intro h2 em,.capture-page .offer h2 em,.capture-page .library h2 em,.capture-page .about__copy h3 em,.capture-page .final-cta h2 em{font-weight:inherit;font-style:normal}
+.capture-page .intro__grid{grid-template-columns:660px 440px;gap:100px}
+.capture-page .about__grid{grid-template-columns:1fr 1fr}
+.capture-page .about__copy h3{font-size:62px;line-height:1.18}
+.capture-page .final-cta .hero__event{justify-content:center;text-align:left;margin:0 0 40px}
+.capture-page .final-cta .campaign-logo{margin-bottom:31px}
+.capture-page .final-cta__inner{max-width:760px}
+.capture-page .final-cta h2{font-weight:400;max-width:609px;margin-inline:auto}
+.capture-page .footer .event-logo{width:300px}
+@media(max-width:1270px){
+  .capture-page .intro__grid{grid-template-columns:1.2fr .8fr;gap:60px}
+  .capture-page .hero h1.hero__lead{font-size:clamp(28px,3.05vw,39px)}
+  .capture-page .hero__support{font-size:clamp(21px,2.2vw,28.28px);line-height:1.25}
+  .capture-page .hero__inner{padding-top:100px}
+  .capture-page .hero__image{background-position:58% top}
+  .capture-page .about__copy h3{font-size:clamp(38px,4.8vw,62px)}
+}
+@media(max-width:900px){
+  .capture-page .hero,.capture-page .hero__inner{min-height:900px}
+  .capture-page .hero__inner{padding-block:75px 150px}
+  .capture-page .hero__content{max-width:58%;gap:26px}
+  .hero__identity{gap:30px}
+  .capture-page .hero .button{font-size:20px;padding-inline:18px}
+  .capture-page .hero__support .hero__forever{font-size:30px}
+}
+@media(max-width:700px){
+  .capture-page .hero,.capture-page .hero__inner{min-height:0}
+  .capture-page .hero__inner{padding-block:35px 80px}
+  .capture-page .hero__content{width:100%;max-width:none;gap:26px}
+  .hero__identity{gap:25px;min-height:440px;align-items:center}
+  .capture-page .hero__event{align-self:flex-start}
+  .capture-page .hero__image{background-size:auto 420px;background-position:69% 155px}
+  .capture-page .hero__shade{background:linear-gradient(180deg,#1c0b11 140px,rgba(28,11,17,.05) 220px,rgba(28,11,17,.06) 410px,#1c0b11 585px)}
+  .capture-page .hero h1.hero__lead{font-size:28px;line-height:1.3}
+  .capture-page .hero__support{font-size:21px;line-height:1.45;padding-left:18px}
+  .capture-page .hero__support .hero__forever{font-size:30px;line-height:1.3}
+  .capture-page .hero .button{font-size:18px;min-height:64px;padding-inline:16px;letter-spacing:-.04em;gap:10px}
+  .capture-page .hero .button span{font-size:22px}
+  .capture-page .intro__grid{grid-template-columns:1fr;gap:35px}
+  .capture-page .offer{padding-block:80px}
+  .capture-page .about__grid{grid-template-columns:1fr}
+  .capture-page .final-cta .hero__event{align-self:center}
+  .capture-page .about__copy h3{font-size:42px}
+}
