@@ -11,3 +11,7 @@ O convite do WhatsApp deve ser preenchido na constante `whatsappGroupUrl` em `ob
 - O preço especial permanece oculto, conforme a copy recebida.
 
 Para visualizar localmente: `python3 -m http.server 8000` e acesse `http://localhost:8000`.
+
+## Primeira versão
+
+A primeira versão publicada (commit `368be0a`) está preservada em `/versao-antiga/`, com seus próprios estilos, scripts, imagens e página de obrigado.
