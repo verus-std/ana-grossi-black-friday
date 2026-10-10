@@ -1,0 +1,701 @@
+<!-- ANA GROSSI — Cole TODO este arquivo em um único widget HTML do Elementor.
+Configuração: altere somente os endereços abaixo conforme o seu WordPress.
+Imagens hospedadas no GitHub Pages; podem ser substituídas pelas URLs da Biblioteca de Mídia.
+-->
+<div id="ag-captura" class="ag-widget capture-page" lang="pt-BR"
+  data-thank-you-url="/obrigado/"
+  data-event-date="2026-11-04T20:00:00-03:00">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+#ag-captura{display:block;position:relative;width:100%;max-width:none;margin:0;padding:0;text-align:left;font:400 16px/normal 'DM Sans',sans-serif;letter-spacing:normal;text-transform:none;isolation:isolate}
+#ag-captura,#ag-captura *,#ag-captura *::before,#ag-captura *::after{box-sizing:border-box}
+#ag-captura :where(h1,h2,h3,h4,p,ol,ul,figure){margin:0 0 1em;padding:0;color:inherit;font-family:inherit;letter-spacing:normal;text-transform:none}
+#ag-captura :where(h1,h2,h3,h4){font-weight:700;line-height:1.2}
+#ag-captura :where(button,input){font:inherit;box-shadow:none;text-shadow:none}
+#ag-captura button{border-radius:0;text-decoration:none}
+#ag-captura a{text-decoration:none;color:inherit}
+#ag-captura img{max-width:100%;height:auto;border:0;box-shadow:none;border-radius:0}
+#ag-captura svg{max-width:100%;flex-shrink:0}
+#ag-captura strong{font-weight:700}
+#ag-captura small{font-size:80%}
+#ag-captura [hidden]{display:none!important}
+#ag-captura{--ink:#2c1b20;--wine:#3c1924;--wine-deep:#231318;--cream:#f8f4ee;--paper:#fffdf9;--blush:#eee5dc;--line:#d9cdc2;--gold:#d1aa71;--gold-light:#eed7af;--muted:#75656a;--font-sans:'DM Sans',sans-serif;--font-head:'Playfair Display',Georgia,serif}
+#ag-captura *,#ag-captura *::before,#ag-captura *::after{box-sizing:border-box}
+#ag-captura{scroll-behavior:smooth}
+#ag-captura{margin:0;color:var(--ink);background:var(--cream);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
+#ag-captura button,#ag-captura input{font:inherit}
+#ag-captura button{cursor:pointer}
+#ag-captura a{color:inherit;text-decoration:none}
+#ag-captura .shell{width:min(100% - 64px,1200px);margin-inline:auto}
+#ag-captura .section{padding:112px 0}
+#ag-captura .announcement{background:#8c283c;color:#fff;position:relative;z-index:2}
+#ag-captura .announcement__inner{min-height:64px;display:flex;align-items:center;justify-content:center;gap:34px}
+#ag-captura .announcement__label{font-family:Manrope,sans-serif;font-size:11px;font-weight:800;letter-spacing:.2em;white-space:nowrap}
+#ag-captura .countdown{display:flex;align-items:center;gap:9px}
+#ag-captura .countdown__item{display:flex;min-width:47px;align-items:center;flex-direction:column;line-height:1.1}
+#ag-captura .countdown__item strong{font-family:Manrope,sans-serif;font-size:22px;line-height:1;font-weight:700;font-variant-numeric:tabular-nums}
+#ag-captura .countdown__item small{font-size:9px;letter-spacing:.08em;text-transform:uppercase;margin-top:3px}
+#ag-captura .countdown__colon{font-size:18px;align-self:flex-start;line-height:22px;opacity:.7}
+#ag-captura .hero{position:relative;min-height:clamp(850px,40vw,1050px);color:#fff;overflow:hidden;background:var(--wine-deep)}
+#ag-captura .hero__image,#ag-captura .hero__shade{position:absolute;inset:0}
+#ag-captura .hero__image{background-image:url('https://verus-std.github.io/ana-grossi-black-friday/assets/hero-ana.jpg');background-size:cover;background-position:center top}
+#ag-captura .hero__shade{background:linear-gradient(90deg,rgba(24,6,10,.46) 0%,rgba(28,7,13,.25) 41%,transparent 72%),linear-gradient(0deg,rgba(20,4,9,.32),transparent 32%)}
+#ag-captura .hero__inner{position:relative;min-height:clamp(850px,40vw,1050px);padding-top:40px;padding-bottom:75px;display:flex;flex-direction:column;align-items:flex-start}
+#ag-captura .brand{display:inline-flex;align-items:center;gap:11px;color:#fff}
+#ag-captura .brand__mark{width:39px;height:39px;display:grid;place-items:center;border:1px solid currentColor;border-radius:50%;font:italic 16px var(--font-head);letter-spacing:-.12em;padding-right:3px}
+#ag-captura .brand__name{font-family:Manrope,sans-serif;font-weight:700;font-size:16px;letter-spacing:.22em;line-height:1.1}
+#ag-captura .brand__name small{display:block;font-family:var(--font-sans);font-size:7px;font-weight:600;letter-spacing:.31em;margin-top:6px}
+#ag-captura .hero__content{max-width:690px;margin-top:auto;padding-top:75px}
+#ag-captura .eyebrow{font-family:Manrope,sans-serif;color:#956e62;font-weight:800;font-size:11px;letter-spacing:.22em;line-height:1.5;margin:0 0 22px}
+#ag-captura .eyebrow--light{color:var(--gold-light)}
+#ag-captura .eyebrow__line{display:inline-block;width:28px;height:1px;background:currentColor;vertical-align:middle;margin-right:10px}
+#ag-captura .hero__edition{font-family:Manrope,sans-serif;letter-spacing:.32em;font-size:14px;font-weight:800;color:var(--gold);margin:0 0 12px}
+#ag-captura .hero__edition span{font-size:10px;letter-spacing:.1em;vertical-align:top;margin-left:2px}
+#ag-captura .hero h1{font:500 clamp(55px,5.6vw,84px)/1.05 var(--font-head);letter-spacing:-.046em;margin:0 0 25px}
+#ag-captura .hero h1 em,#ag-captura .section h2 em,#ag-captura .thanks h1 em{font-weight:400;color:var(--gold-light)}
+#ag-captura .hero__lifetime{display:inline-block;vertical-align:middle;margin-left:17px;padding:7px 10px 8px;border:1px solid rgba(238,215,175,.7);border-radius:2px;color:var(--gold-light);font:700 11px Manrope,sans-serif;text-transform:uppercase;letter-spacing:.14em;transform:rotate(-5deg)}
+#ag-captura .hero__lead{font-size:18px;line-height:1.55;max-width:590px;margin:0 0 15px;color:#f4ece8}
+#ag-captura .hero__support{font-size:15px;line-height:1.7;color:#d9cdd0;max-width:545px;margin:0 0 25px}
+#ag-captura .hero__support strong{color:#fff}
+#ag-captura .hero__event{display:flex;align-items:center;gap:12px;margin-bottom:26px}
+#ag-captura .event-icon{width:37px;height:37px;border:1px solid rgba(209,170,113,.6);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:18px}
+#ag-captura .hero__event strong,#ag-captura .hero__event small{display:block}
+#ag-captura .hero__event strong{font:700 13px Manrope,sans-serif;letter-spacing:.07em;text-transform:uppercase}
+#ag-captura .hero__event small{font-size:12px;color:#d8c6c9;margin-top:3px}
+#ag-captura .button{display:inline-flex;align-items:center;justify-content:center;gap:32px;min-height:57px;padding:15px 27px;border:1px solid transparent;border-radius:3px;font:800 12px Manrope,sans-serif;letter-spacing:.08em;text-transform:uppercase;transition:transform .2s,background .2s,box-shadow .2s}
+#ag-captura .button:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.15)}
+#ag-captura .button:focus-visible,#ag-captura .modal__close:focus-visible,#ag-captura a:focus-visible{outline:3px solid #c68745;outline-offset:4px}
+#ag-captura .button span{font-size:20px;font-weight:400;line-height:1}
+#ag-captura .button--gold{background:var(--gold-light);color:var(--wine-deep)}
+#ag-captura .button--gold:hover{background:#f7e4c4}
+#ag-captura .button--wine{background:var(--wine);color:#fff}
+#ag-captura .button--wine:hover{background:#64283a}
+#ag-captura .hero__hint{font-size:11px;color:#bdafb0;margin:12px 0 0;letter-spacing:.03em}
+#ag-captura .hero__side-note{position:absolute;right:0;bottom:71px;writing-mode:vertical-rl;font:700 9px Manrope,sans-serif;letter-spacing:.24em;color:#fff9;display:flex;align-items:center;gap:12px}
+#ag-captura .hero__side-note span{color:var(--gold)}
+#ag-captura .intro{background:var(--paper)}
+#ag-captura .intro__grid{display:grid;grid-template-columns:1.2fr .8fr;gap:100px;align-items:end}
+#ag-captura .section h2{font:400 clamp(38px,4vw,62px)/1.18 var(--font-head);letter-spacing:-.042em;margin:0}
+#ag-captura .intro h2 em,#ag-captura .library h2 em,#ag-captura .about h2 em{color:#9d6e64}
+#ag-captura .intro__body>p{font-size:19px;line-height:1.6;max-width:480px;margin:0}
+#ag-captura .intro__divider{height:1px;background:var(--line);margin:28px 0 22px}
+#ag-captura .intro__stat{display:flex;align-items:center;gap:20px}
+#ag-captura .intro__stat strong{font:400 80px/1 var(--font-head);letter-spacing:-.08em;color:#8c3749}
+#ag-captura .intro__stat strong span{font-size:38px;vertical-align:top;line-height:1.5}
+#ag-captura .intro__stat>span{font-size:13px;line-height:1.5;max-width:200px;text-transform:uppercase;letter-spacing:.05em;font-weight:700}
+#ag-captura .offer{background:radial-gradient(circle at 0 100%,#5c2938,transparent 35%),var(--wine-deep);color:#fff;position:relative;overflow:hidden}
+#ag-captura .offer__grid{display:grid;grid-template-columns:1fr .9fr;gap:100px;align-items:center;position:relative}
+#ag-captura .offer h2{font-size:clamp(42px,4.2vw,63px);margin-bottom:24px}
+#ag-captura .offer h2 em{color:var(--gold-light)}
+#ag-captura .offer__narrative>p:not(.eyebrow){font-size:16px;line-height:1.8;color:#d6c8ca;max-width:495px}
+#ag-captura .offer__details{display:flex;align-items:flex-start;gap:12px;color:#ead8d6;font-size:13px;line-height:1.6;margin-top:32px;max-width:430px}
+#ag-captura .offer__details span{color:var(--gold);font-size:18px;line-height:1.1}
+#ag-captura .offer-card{background:var(--paper);color:var(--ink);padding:42px 44px 38px;box-shadow:22px 22px 0 rgba(181,134,101,.17)}
+#ag-captura .offer-card__top{font:800 10px Manrope,sans-serif;letter-spacing:.22em;color:#9b5260;margin:0 0 14px}
+#ag-captura .offer-card h3{font:400 38px/1.18 var(--font-head);letter-spacing:-.04em;margin:0 0 28px}
+#ag-captura .price-line{display:flex;justify-content:space-between;gap:14px;padding:17px 0;border-top:1px solid var(--line);font-size:13px;line-height:1.4}
+#ag-captura .price-line span{font-weight:700}
+#ag-captura .price-line small{font-weight:400;color:var(--muted)}
+#ag-captura .price-line s{color:#a09596;white-space:nowrap}
+#ag-captura .price-line--special{border-bottom:1px solid var(--line);align-items:center}
+#ag-captura .price-line--special strong{color:#8c283c;text-align:right;max-width:160px}
+#ag-captura .offer-card__note{font-size:13px;line-height:1.5;margin:24px 0 17px;color:#6c5d60}
+#ag-captura .offer-card .button{width:100%;gap:12px}
+#ag-captura .offer-card__foot{display:block;text-align:center;color:#8c7e80;font-size:10px;margin-top:14px}
+#ag-captura .library{background:#f7f2eb}
+#ag-captura .library__head{display:flex;justify-content:space-between;gap:70px;align-items:end;margin-bottom:46px}
+#ag-captura .library__head>p{max-width:340px;font-size:16px;line-height:1.7;color:#625559;margin-bottom:4px}
+#ag-captura .course-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+#ag-captura .course-card{min-height:318px;display:flex;flex-direction:column;background:var(--paper);border:1px solid #e5dad0;padding:24px;transition:transform .2s,box-shadow .2s}
+#ag-captura .course-card:hover{transform:translateY(-4px);box-shadow:0 12px 28px #2c1b2010}
+#ag-captura .course-card__num{font:800 10px Manrope,sans-serif;letter-spacing:.15em;color:#a37369}
+#ag-captura .course-card__icon{font:400 29px var(--font-head);color:#a87478;margin:16px 0 13px;height:29px;line-height:1}
+#ag-captura .course-card h3{font:500 21px/1.26 var(--font-head);letter-spacing:-.025em;margin:0 0 11px}
+#ag-captura .course-card p{font-size:12px;line-height:1.55;color:#665b5d;margin:0 0 10px}
+#ag-captura .course-card .course-card__subtitle{color:#8c3749;font-weight:700}
+#ag-captura .course-card__price{border-top:1px solid var(--line);padding-top:13px;margin-top:auto;display:flex;justify-content:space-between;gap:8px;font-size:10px;color:#7e7272;text-transform:uppercase;letter-spacing:.04em}
+#ag-captura .course-card__price s{font-weight:700;color:#a09a98;white-space:nowrap}
+#ag-captura .library__cta{border-top:1px solid #cdbfb5;margin-top:42px;padding-top:30px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+#ag-captura .library__cta p{font:400 23px/1.3 var(--font-head);max-width:450px;margin:0}
+#ag-captura .about{background:#f1ece8}
+#ag-captura .about__panel{background:var(--paper);border:1px solid #ded2c8;border-radius:20px;overflow:hidden}
+#ag-captura .about__header{padding:29px 47px;display:flex;justify-content:space-between;align-items:center;gap:20px;border-bottom:1px solid #e6dad1}
+#ag-captura .about__header .eyebrow{font-size:9px;margin-bottom:5px}
+#ag-captura .about__header h2{font-size:32px;line-height:1.2}
+#ag-captura .about__identity{display:flex;align-items:center;gap:11px;color:#6e5c5e}
+#ag-captura .about__identity img{width:50px;height:50px;object-fit:cover;object-position:center 23%;border-radius:50%}
+#ag-captura .about__identity strong,#ag-captura .about__identity small{display:block}
+#ag-captura .about__identity strong{font-size:12px;color:var(--ink)}
+#ag-captura .about__identity small{font-size:10px;margin-top:3px}
+#ag-captura .about__grid{padding:39px 47px 25px;display:grid;grid-template-columns:1.06fr .94fr;gap:44px;align-items:start}
+#ag-captura .about__photos{display:grid;grid-template-columns:.54fr 1fr;gap:13px;min-height:565px}
+#ag-captura .about__photo{display:block;width:100%;height:565px;object-fit:cover;border-radius:10px}
+#ag-captura .about__photo--portrait{object-position:47% 25%}
+#ag-captura .about__photo--work{object-position:50% 22%}
+#ag-captura .about__copy h3{font:400 clamp(37px,3.5vw,54px)/1.13 var(--font-head);letter-spacing:-.043em;margin:0 0 28px}
+#ag-captura .about__copy h3 em{color:#9d6e64}
+#ag-captura .about__copy>p:not(.eyebrow){font-size:15px;line-height:1.8;color:#63575a;margin:0 0 16px}
+#ag-captura .about__copy strong{color:var(--wine)}
+#ag-captura .about__footer{display:flex;justify-content:center;padding:4px 47px 42px}
+#ag-captura .final-cta{background:radial-gradient(circle at 80% 20%,#65303f,transparent 45%),var(--wine-deep);text-align:center;color:#fff}
+#ag-captura .final-cta__inner{max-width:760px}
+#ag-captura .final-cta h2{font-size:clamp(42px,4.8vw,68px);margin-bottom:20px}
+#ag-captura .final-cta h2 em{color:var(--gold-light)}
+#ag-captura .final-cta__inner>p:not(.eyebrow){font-size:16px;line-height:1.65;color:#decfd2;max-width:490px;margin:0 auto 28px}
+#ag-captura .footer{background:#1c1014;color:#b6a7ab}
+#ag-captura .footer__inner{min-height:115px;display:flex;align-items:center;justify-content:space-between;gap:20px;font-size:11px}
+#ag-captura .footer .brand{color:#e4d6d6}
+#ag-captura .footer a:hover{text-decoration:underline}
+#ag-captura .modal[hidden]{display:none}
+#ag-captura .modal{position:fixed;inset:0;z-index:10;display:grid;place-items:center;padding:20px;overflow-y:auto}
+#ag-captura .modal__backdrop{position:absolute;inset:0;background:#170c11d9;backdrop-filter:blur(6px)}
+#ag-captura .modal__panel{position:relative;width:min(100%,500px);background:var(--paper);padding:43px 44px 37px;box-shadow:0 25px 65px #0b050a66}
+#ag-captura .modal__close{position:absolute;top:14px;right:16px;border:0;background:transparent;color:var(--wine);font-size:30px;line-height:1}
+#ag-captura .modal__panel h2{font:400 39px/1.16 var(--font-head);letter-spacing:-.04em;margin:0 0 11px}
+#ag-captura .modal__panel h2 em{color:#9d6e64}
+#ag-captura .modal__panel>p:not(.eyebrow){font-size:13px;line-height:1.6;color:#6c5e60;margin:0 0 22px}
+#ag-captura .modal form{display:flex;flex-direction:column}
+#ag-captura .modal label{font:700 11px Manrope,sans-serif;letter-spacing:.04em;margin-bottom:6px}
+#ag-captura .modal input{width:100%;height:44px;padding:0 13px;border:1px solid #d8ccc5;background:#fff;color:var(--ink);border-radius:2px;margin-bottom:16px;font-size:13px}
+#ag-captura .modal input:focus{outline:2px solid #c79584;outline-offset:1px}
+#ag-captura .modal form .button{width:100%;margin-top:6px}
+#ag-captura .modal form small{color:#8e8181;font-size:10px;line-height:1.5;text-align:center;margin-top:12px}
+#ag-captura.thanks-page{background:var(--wine-deep)}
+#ag-captura .thanks-header{display:flex;align-items:center;justify-content:center;gap:35px;min-height:100px;padding:22px;background:#31151e;border-bottom:1px solid #d1aa7129}
+#ag-captura .thanks-header__edition{font:700 9px Manrope,sans-serif;letter-spacing:.19em;color:var(--gold-light);padding-left:35px;border-left:1px solid #d1aa7155}
+#ag-captura .thanks-header__edition span{padding:0 9px}
+#ag-captura .thanks-stage{position:relative;overflow:hidden;color:var(--paper);background:radial-gradient(ellipse at 50% 0,#68303b66,transparent 60%),linear-gradient(150deg,#2f141e,#170c11);border-bottom:1px solid #d1aa7144}
+#ag-captura .thanks-stage::before{content:'';position:absolute;inset:20px 8% -240px;border:1px solid #d1aa7112;border-radius:50%;pointer-events:none}
+#ag-captura .thanks-stage__inner{position:relative;text-align:center;padding-block:38px 53px;max-width:840px}
+#ag-captura .signup-steps{display:flex;align-items:center;justify-content:center;gap:55px;list-style:none;padding:0;margin:0 0 38px}
+#ag-captura .signup-steps li{position:relative;display:flex;align-items:center;gap:9px;color:#bda8ae;font-size:11px}
+#ag-captura .signup-steps li+li::before{content:'';position:absolute;right:calc(100% + 12px);width:31px;height:1px;background:#bda8ae66}
+#ag-captura .signup-steps li>span{width:27px;height:27px;border:1px solid #bda8ae66;display:grid;place-items:center;border-radius:50%;font:600 9px Manrope,sans-serif}
+#ag-captura .signup-steps [aria-current]{color:var(--gold-light)}
+#ag-captura .signup-steps [aria-current]>span{background:var(--gold-light);color:var(--wine);border-color:var(--gold-light)}
+#ag-captura .thanks-stage .eyebrow{font-size:10px;margin-bottom:14px}
+#ag-captura .thanks-stage h1{font:400 clamp(43px,4.8vw,68px)/1.12 var(--font-head);letter-spacing:-.04em;margin:0 0 19px}
+#ag-captura .thanks-stage h1 em{color:var(--gold-light);font-weight:400}
+#ag-captura .thanks-stage__lead{max-width:510px;margin:0 auto 28px;font-size:15px;line-height:1.7;color:#d9c9ce}
+#ag-captura .thanks-stage__lead strong{color:#f2e5e8;font-weight:500}
+#ag-captura .group-card{max-width:565px;margin-inline:auto;padding:24px 40px 27px;border:1px solid #cfb28860;background:linear-gradient(135deg,#fffdf90d,#fffdf903);border-radius:12px;box-shadow:0 18px 50px #10040930}
+#ag-captura .group-card__icon{width:38px;height:38px;color:var(--gold-light);margin-bottom:9px}
+#ag-captura .group-card h2{font:400 29px/1.22 var(--font-head);letter-spacing:-.025em;margin:0 0 12px}
+#ag-captura .group-card>p{color:#d4c4ca;font-size:13px;line-height:1.65;margin:0 0 22px}
+#ag-captura .button--whatsapp{background:#477152;color:#fff;width:100%;gap:20px;box-shadow:0 4px 0 #172f20}
+#ag-captura .button--whatsapp:hover{background:#568862}
+#ag-captura .group-card__hint{display:block;font-size:10px;line-height:1.5;color:#bdaab1;margin-top:16px}
+#ag-captura .thanks-date{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:25px;text-align:left;font:700 8px Manrope,sans-serif;letter-spacing:.13em;color:#c9aeb9}
+#ag-captura .thanks-date strong{display:block;font-size:13px;margin-top:5px;letter-spacing:.03em;color:#f1ddd5}
+#ag-captura .thanks-date strong span{padding:0 7px;color:var(--gold)}
+#ag-captura .group-dialog{width:min(calc(100% - 32px),450px);border:1px solid #d9cdc2;padding:35px;border-radius:10px;background:var(--paper);color:var(--ink);box-shadow:0 20px 70px #0005}
+#ag-captura .group-dialog::backdrop{background:#170c11cf;backdrop-filter:blur(6px)}
+#ag-captura .group-dialog h2{font:400 38px/1.15 var(--font-head);letter-spacing:-.035em;margin:0 0 18px}
+#ag-captura .group-dialog h2 em{color:#9d6e64}
+#ag-captura .group-dialog>p:not(.eyebrow){font-size:14px;line-height:1.7;color:#6c5e60;margin-bottom:24px}
+#ag-captura .group-dialog .button{width:100%}
+@media(max-width:700px){
+#ag-captura .thanks-header{min-height:110px;flex-direction:column;gap:15px;padding:20px}
+#ag-captura .thanks-header__edition{border:0;padding:0;font-size:8px}
+#ag-captura .thanks-stage__inner{padding-block:30px 40px}
+#ag-captura .signup-steps{gap:42px;margin-bottom:31px}
+#ag-captura .signup-steps li{font-size:10px;gap:7px}
+#ag-captura .signup-steps li+li::before{width:22px;right:calc(100% + 10px)}
+#ag-captura .thanks-stage__lead{font-size:14px}
+#ag-captura .group-card{padding:24px 20px}
+#ag-captura .group-card h2{font-size:26px}
+#ag-captura .group-card .button{font-size:11px;gap:12px;padding-inline:15px}
+#ag-captura .thanks-stage::before{inset:15px -45% -150px}
+}
+@media(max-width:1000px){
+#ag-captura .offer__grid{gap:50px}
+#ag-captura .about__grid{gap:28px;padding:32px}
+#ag-captura .about__header{padding-inline:32px}
+#ag-captura .about__photos,#ag-captura .about__photo{min-height:520px;height:520px}
+#ag-captura .about__copy>p:not(.eyebrow){font-size:14px}
+#ag-captura .course-grid{grid-template-columns:repeat(2,1fr)}
+#ag-captura .course-card{min-height:290px}
+#ag-captura .intro__grid{gap:45px}
+}
+@media(max-width:700px){
+#ag-captura .shell{width:min(100% - 38px,1200px)}
+#ag-captura .section{padding:75px 0}
+#ag-captura .announcement__inner{min-height:70px;gap:9px;flex-direction:column;padding:8px 0}
+#ag-captura .announcement__label{font-size:9px}
+#ag-captura .countdown__item strong{font-size:17px}
+#ag-captura .countdown__item small{font-size:8px}
+#ag-captura .countdown__colon{font-size:14px}
+#ag-captura .hero__inner{padding-top:25px}
+#ag-captura .hero__edition{font-size:11px}
+#ag-captura .hero h1{font-size:clamp(48px,11vw,67px)}
+#ag-captura .hero__lifetime{font-size:9px;margin-left:5px}
+#ag-captura .hero__lead{font-size:15px}
+#ag-captura .hero__support{font-size:13px}
+#ag-captura .hero__side-note{display:none}
+#ag-captura .hero .button{width:100%;gap:15px}
+#ag-captura .intro__grid,#ag-captura .offer__grid{grid-template-columns:1fr;gap:36px}
+#ag-captura .intro__body>p{font-size:17px}
+#ag-captura .intro__stat strong{font-size:65px}
+#ag-captura .offer-card{padding:32px 25px;box-shadow:12px 12px 0 rgba(181,134,101,.17)}
+#ag-captura .offer-card h3{font-size:33px}
+#ag-captura .library__head{display:block;margin-bottom:30px}
+#ag-captura .library__head>p{margin-top:20px;font-size:14px}
+#ag-captura .course-grid{grid-template-columns:1fr 1fr;gap:10px}
+#ag-captura .course-card{padding:19px;min-height:300px}
+#ag-captura .course-card h3{font-size:19px}
+#ag-captura .library__cta{display:block}
+#ag-captura .library__cta p{margin-bottom:20px}
+#ag-captura .library__cta .button{width:100%;gap:10px}
+#ag-captura .footer__inner{padding:26px 0;flex-direction:column;text-align:center;gap:20px}
+#ag-captura .final-cta .button{width:100%;gap:10px}
+#ag-captura .modal__panel{padding:36px 25px 25px}
+#ag-captura .modal__panel h2{font-size:34px}
+}
+@media(max-width:480px){
+#ag-captura .course-grid{grid-template-columns:1fr}
+#ag-captura .course-card{min-height:0}
+#ag-captura .course-card__icon{margin:10px 0}
+#ag-captura .course-card h3{font-size:22px}
+#ag-captura .course-card__price{margin-top:15px}
+#ag-captura .hero h1{font-size:clamp(45px,11vw,54px)}
+#ag-captura .hero__lifetime{display:table;margin:14px 0 0}
+#ag-captura .price-line{font-size:11px}
+#ag-captura .brand__name{font-size:13px}
+#ag-captura .brand__name small{font-size:6px}
+#ag-captura .brand__mark{width:34px;height:34px}
+}
+@media(max-width:700px){
+#ag-captura .hero,#ag-captura .hero__inner{min-height:0}
+#ag-captura .hero__inner{padding-bottom:58px}
+#ag-captura .hero__image{background-size:auto 430px;background-position:69% top;background-repeat:no-repeat}
+#ag-captura .hero__shade{background:linear-gradient(180deg,rgba(20,4,9,.12) 0%,rgba(20,4,9,.08) 23%,#1c0b11 410px),linear-gradient(90deg,rgba(20,4,9,.45),transparent 75%)}
+#ag-captura .hero__content{margin-top:0;padding-top:275px}
+#ag-captura .about__header{padding:22px;gap:12px}
+#ag-captura .about__header h2{font-size:27px}
+#ag-captura .about__identity img{width:43px;height:43px}
+#ag-captura .about__identity small{display:none}
+#ag-captura .about__grid{grid-template-columns:1fr;padding:20px 20px 8px;gap:30px}
+#ag-captura .about__photos{grid-template-columns:.54fr 1fr;gap:9px;min-height:0;height:385px}
+#ag-captura .about__photo{min-height:0;height:385px}
+#ag-captura .about__copy h3{font-size:clamp(38px,8vw,48px);margin-bottom:21px}
+#ag-captura .about__footer{padding:5px 20px 30px}
+#ag-captura .about__footer .button{width:100%}
+}
+@media(prefers-reduced-motion:reduce){
+#ag-captura{scroll-behavior:auto}
+#ag-captura *,#ag-captura *::before,#ag-captura *::after{transition:none!important;animation:none!important}
+}
+#ag-captura{--lime:#d4ed85}
+#ag-captura .campaign-logo{display:flex;flex-direction:column;align-items:flex-start;color:#fff;gap:5px;width:max-content;max-width:100%}
+#ag-captura .campaign-logo__black{font:800 clamp(30px,3vw,42px)/1.05 Manrope,sans-serif;letter-spacing:-.045em}
+#ag-captura .campaign-logo__name{font:600 18px/1.4 var(--font-sans);color:#f2dfbf}
+#ag-captura .campaign-logo__forever{display:flex;align-items:center;gap:9px;font:800 19px/1.2 Manrope,sans-serif;letter-spacing:.09em;color:var(--lime)}
+#ag-captura .campaign-logo__forever>span{font-size:36px;line-height:1;font-weight:500}
+#ag-captura .announcement__inner{min-height:78px}
+#ag-captura .announcement__label{font-size:14px;letter-spacing:.08em}
+#ag-captura .countdown__item{min-width:58px}
+#ag-captura .countdown__item strong{font-size:29px}
+#ag-captura .countdown__item small{font-size:13px;letter-spacing:0;text-transform:none}
+#ag-captura .eyebrow{font-size:14px;letter-spacing:.12em;color:#805144}
+#ag-captura .eyebrow--light{color:var(--gold-light)}
+#ag-captura .hero,#ag-captura .hero__inner{min-height:clamp(980px,43vw,1140px)}
+#ag-captura .hero__inner{padding-block:36px 55px}
+#ag-captura .hero__content{max-width:650px;padding-top:38px}
+#ag-captura .hero__offer-label{display:table;margin:0 0 23px;padding:10px 16px;background:var(--gold-light);color:#31131b;font:800 clamp(18px,1.7vw,24px)/1.3 Manrope,sans-serif;text-transform:uppercase;letter-spacing:.025em}
+#ag-captura .hero h1{font-size:clamp(54px,4.7vw,72px);margin-bottom:24px}
+#ag-captura .hero__lifetime{display:flex;width:max-content;max-width:100%;align-items:center;gap:15px;margin:18px 0 0;padding:0;border:0;transform:none;font:800 34px/1.1 Manrope,sans-serif;letter-spacing:.05em;color:var(--lime)}
+#ag-captura .hero__lifetime>span{font-size:59px;line-height:.75;font-weight:400}
+#ag-captura .hero__lead{font-size:20px;line-height:1.6;max-width:580px}
+#ag-captura .hero__support{font-size:21px;line-height:1.6;color:#fff1dc;max-width:580px;padding:16px 0 16px 20px;border-left:3px solid var(--lime);margin-bottom:24px}
+#ag-captura .hero__support strong{color:#fff1dc;font-weight:700}
+#ag-captura .hero__support .hero__forever{color:var(--lime);display:block;font-size:27px;line-height:1.3;margin-top:5px}
+#ag-captura .hero__event strong{font-size:17px;letter-spacing:.02em}
+#ag-captura .hero__event small{font-size:16px;color:#e5d8dc}
+#ag-captura .hero__hint{font-size:15px;color:#e0d2d6}
+#ag-captura .button{font-size:15px;min-height:64px;letter-spacing:.025em;padding:18px 25px;line-height:1.45}
+#ag-captura .button span{flex-shrink:0}
+#ag-captura .intro__body>p{font-size:21px}
+#ag-captura .intro__stat>span{font-size:17px;max-width:260px;letter-spacing:.01em}
+#ag-captura .offer__grid{grid-template-columns:1fr 1fr;gap:64px}
+#ag-captura .offer__narrative>p:not(.eyebrow){font-size:19px;color:#e9dde0}
+#ag-captura .offer__details{font-size:17px;color:#f3e6e8}
+#ag-captura .offer-card{padding:36px}
+#ag-captura .offer-card__top{font-size:15px;letter-spacing:.07em;color:#85384a}
+#ag-captura .offer-card h3{font-size:39px;line-height:1.2}
+#ag-captura .price-line{display:flex;flex-direction:column;align-items:flex-start;gap:12px;padding:27px 0;font-size:19px;line-height:1.5}
+#ag-captura .price-line s{display:block;font:800 clamp(36px,3.5vw,46px)/1.15 Manrope,sans-serif;color:#664047;text-decoration-thickness:2px;text-decoration-color:#9e495a}
+#ag-captura .price-line small{font-size:17px;color:#5e4e53}
+#ag-captura .price-line--special{background:#3c1924;color:#fff;padding:25px;border:0;gap:13px}
+#ag-captura .price-line--special .price-line__label{font:800 16px/1.4 Manrope,sans-serif;color:var(--gold-light);letter-spacing:.04em}
+#ag-captura .price-line--special strong{color:var(--lime);font:800 29px/1.25 Manrope,sans-serif;max-width:none;text-align:left;letter-spacing:-.035em}
+#ag-captura .price-line--special strong>span{font:400 40px/.8 var(--font-sans);vertical-align:middle}
+#ag-captura .price-line--special p{font-size:17px;line-height:1.65;color:#f7e9ee;margin:0}
+#ag-captura .price-line--special .price-line__reveal{border-top:1px solid #ffffff40;padding-top:14px;width:100%;font-size:17px;font-weight:400}
+#ag-captura .price-line__reveal b{font-size:19px;color:#fff}
+#ag-captura .offer-card__note{font-size:18px;color:#4d3b41;line-height:1.6}
+#ag-captura .offer-card__foot{font-size:14px;line-height:1.6;color:#66545b}
+#ag-captura .library__head>p{font-size:19px;color:#51434a}
+#ag-captura .course-card{min-height:410px;padding:23px}
+#ag-captura .course-card__num{font-size:13px;letter-spacing:.07em;color:#86514b}
+#ag-captura .course-card h3{font-size:25px;line-height:1.25}
+#ag-captura .course-card p{font-size:17px;line-height:1.65;color:#51444a}
+#ag-captura .course-card__price{flex-direction:column;align-items:flex-start;gap:5px;font-size:14px;color:#5a424b;letter-spacing:0;padding-top:18px;margin-top:auto;text-transform:none}
+#ag-captura .course-card__price s{font:800 26px/1.3 Manrope,sans-serif;color:#663044;text-decoration-thickness:1.5px;text-decoration-color:#a65364}
+#ag-captura .library__cta p{font-size:28px}
+#ag-captura .about__header .eyebrow{font-size:13px}
+#ag-captura .about__identity strong{font-size:16px}
+#ag-captura .about__identity small{font-size:14px}
+#ag-captura .about__copy>p:not(.eyebrow){font-size:18px;line-height:1.8;color:#51444a}
+#ag-captura .final-cta .campaign-logo{align-items:center;margin:0 auto 30px}
+#ag-captura .final-cta .campaign-logo__black{font-size:clamp(40px,5vw,58px)}
+#ag-captura .final-cta .campaign-logo__name{font-size:23px}
+#ag-captura .final-cta .campaign-logo__forever{font-size:28px}
+#ag-captura .final-cta .campaign-logo__forever>span{font-size:48px}
+#ag-captura .final-cta__inner>p:not(.eyebrow){font-size:20px;color:#f1e1e6}
+#ag-captura .footer__inner{font-size:14px;min-height:160px;padding-block:25px;flex-wrap:wrap}
+#ag-captura .campaign-logo--footer .campaign-logo__black{font-size:27px}
+#ag-captura .campaign-logo--footer .campaign-logo__name{font-size:15px}
+#ag-captura .campaign-logo--footer .campaign-logo__forever{font-size:15px}
+#ag-captura .campaign-logo--footer .campaign-logo__forever>span{font-size:28px}
+#ag-captura .modal__panel{max-height:calc(100dvh - 40px);overflow-y:auto}
+#ag-captura .modal__panel>p:not(.eyebrow){font-size:17px;color:#54424a}
+#ag-captura .modal label{font-size:16px;letter-spacing:0}
+#ag-captura .modal input{font-size:17px;height:52px;color:#2c1b20}
+#ag-captura .modal input::placeholder{color:#74636a}
+#ag-captura .modal__close{width:44px;height:44px;top:5px;right:5px}
+#ag-captura .thanks-header .campaign-logo{align-items:center}
+#ag-captura .signup-steps li{font-size:15px}
+#ag-captura .signup-steps li>span{font-size:13px;width:32px;height:32px}
+#ag-captura .thanks-stage .eyebrow{font-size:15px}
+#ag-captura .thanks-stage__lead{font-size:20px}
+#ag-captura .group-card>p{font-size:18px}
+#ag-captura .group-card__hint{font-size:14px;color:#e2ccd4}
+#ag-captura .thanks-date{font-size:13px;color:#e4cdd5}
+#ag-captura .thanks-date strong{font-size:18px}
+#ag-captura .group-dialog>p:not(.eyebrow){font-size:18px}
+@media(max-width:1100px){
+#ag-captura .offer__grid{gap:38px}
+#ag-captura .offer-card{padding:28px}
+#ag-captura .hero__content{max-width:57%}
+#ag-captura .hero h1{font-size:58px}
+}
+@media(max-width:800px){
+#ag-captura .offer__grid{grid-template-columns:1fr}
+#ag-captura .offer__narrative>p:not(.eyebrow){max-width:none}
+}
+@media(max-width:700px){
+#ag-captura .announcement__inner{gap:10px;padding-block:12px}
+#ag-captura .announcement__label{font-size:13px;letter-spacing:.04em;white-space:normal;text-align:center}
+#ag-captura .countdown__item strong{font-size:25px}
+#ag-captura .countdown__item small{font-size:12px}
+#ag-captura .hero,#ag-captura .hero__inner{min-height:0}
+#ag-captura .hero__inner{padding-block:25px 48px}
+#ag-captura .hero__inner>.campaign-logo{min-height:130px;align-items:center;align-self:center;text-align:center}
+#ag-captura .hero__image{background-position:69% 155px;background-size:auto 430px}
+#ag-captura .hero__shade{background:linear-gradient(180deg,#1c0b11 135px,rgba(28,11,17,.1) 195px,rgba(28,11,17,.06) 400px,#1c0b11 580px)}
+#ag-captura .hero__content{padding-top:345px;max-width:100%;width:100%;margin-top:0}
+#ag-captura .hero__offer-label{font-size:18px;padding:11px 13px}
+#ag-captura .hero h1{font-size:clamp(42px,10.6vw,60px)}
+#ag-captura .hero__lifetime{font-size:30px;gap:12px;margin-top:18px}
+#ag-captura .hero__lead{font-size:19px}
+#ag-captura .hero__support{font-size:20px;padding-left:15px}
+#ag-captura .hero__support .hero__forever{font-size:26px}
+#ag-captura .hero .button,#ag-captura .button{font-size:15px;gap:16px}
+#ag-captura .intro__body>p{font-size:20px}
+#ag-captura .intro__stat>span{font-size:16px}
+#ag-captura .offer-card{padding:26px 22px}
+#ag-captura .offer-card h3{font-size:35px}
+#ag-captura .price-line{font-size:18px}
+#ag-captura .price-line s{font-size:40px}
+#ag-captura .price-line--special{padding:21px 18px}
+#ag-captura .price-line--special strong{font-size:27px}
+#ag-captura .library__head>p{font-size:18px}
+#ag-captura .course-card h3{font-size:25px}
+#ag-captura .course-card{padding:23px;min-height:0}
+#ag-captura .course-card__price{margin-top:16px}
+#ag-captura .about__identity{display:none}
+#ag-captura .about__copy>p:not(.eyebrow){font-size:18px}
+#ag-captura .final-cta .campaign-logo__name{font-size:20px}
+#ag-captura .footer__inner{align-items:center}
+#ag-captura .campaign-logo--footer{align-items:center}
+#ag-captura .group-card .button{font-size:15px}
+#ag-captura .signup-steps{gap:35px}
+#ag-captura .signup-steps li{font-size:13px}
+#ag-captura .signup-steps li+li::before{right:calc(100% + 7px);width:21px}
+}
+@media(max-width:380px){
+#ag-captura .price-line s{font-size:36px}
+#ag-captura .price-line--special strong{font-size:24px}
+#ag-captura .campaign-logo__name{font-size:17px}
+}
+#ag-captura .event-logo{display:block;max-width:100%;height:auto;object-fit:contain}
+#ag-captura.capture-page .hero,#ag-captura.capture-page .hero__inner{min-height:999px}
+#ag-captura.capture-page .hero__inner{padding-block:124px 208px}
+#ag-captura.capture-page .hero__content{width:641px;max-width:57%;margin:0;padding:0;display:flex;flex-direction:column;align-items:flex-start;gap:0}
+#ag-captura.capture-page .hero__logo{width:411px;margin:0 0 38px}
+#ag-captura.capture-page .hero__event{min-height:51px;margin:0}
+#ag-captura.capture-page .hero__event small{margin-top:7px}
+#ag-captura.capture-page .hero h1.hero__title{font:500 clamp(54px,4.05vw,65px)/1.15 Manrope,sans-serif;letter-spacing:-.055em;text-transform:uppercase;max-width:620px;margin:0 0 21px;color:var(--lime)}
+#ag-captura.capture-page .hero__lead{font:400 27px/1.25 Manrope,sans-serif;letter-spacing:-.025em;max-width:615px;margin:0 0 27px;color:#f4ece8}
+#ag-captura .hero__lead strong{display:inline;font-weight:700;color:#f4ece8}
+#ag-captura.capture-page .hero__support{width:641px;max-width:100%;padding:3px 0 4px 27px;margin:0 0 27px;border-left-width:4px;font-size:28.28px;line-height:31.6px}
+#ag-captura.capture-page .hero__support .hero__forever{font-size:36.37px;line-height:47.3px;margin-top:10px}
+#ag-captura.capture-page .hero__event{margin-bottom:28px}
+#ag-captura .hero__action{width:422px;max-width:100%;text-align:center}
+#ag-captura.capture-page .hero .button{width:100%;min-height:64px;border-radius:81px;padding:18px 25px;gap:12px;font-size:24px;letter-spacing:-.07em;line-height:1.1;box-shadow:0 4px 39.2px #ffffff40}
+#ag-captura.capture-page .hero .button--gold{background:var(--lime)}
+#ag-captura.capture-page .hero .button span{font-size:27px;font-weight:800}
+#ag-captura.capture-page .hero__hint{margin:9px 0 0;font-size:15px;line-height:20px;letter-spacing:.03em}
+#ag-captura .section-divider{position:absolute;left:0;width:100%;height:auto;aspect-ratio:1920 / 115;background:var(--paper);mask:url("data:image/svg+xml,%3Csvg%20width%3D%221920%22%20height%3D%22115%22%20viewBox%3D%220%200%201920%20115%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M1920%20115H0V0H109C142.137%200%20164.846%2034.7275%20192.769%2052.5694C197.73%2055.7388%20203.222%2057.5%20209%2057.5H1711C1716.78%2057.5%201722.27%2055.7388%201727.23%2052.5694C1755.15%2034.7276%201777.86%200%201811%200H1920V115Z%22%20fill%3D%22%23FFFDF9%22%2F%3E%0A%3C%2Fsvg%3E%0A") center/100% 100% no-repeat;-webkit-mask:url("data:image/svg+xml,%3Csvg%20width%3D%221920%22%20height%3D%22115%22%20viewBox%3D%220%200%201920%20115%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M1920%20115H0V0H109C142.137%200%20164.846%2034.7275%20192.769%2052.5694C197.73%2055.7388%20203.222%2057.5%20209%2057.5H1711C1716.78%2057.5%201722.27%2055.7388%201727.23%2052.5694C1755.15%2034.7276%201777.86%200%201811%200H1920V115Z%22%20fill%3D%22%23FFFDF9%22%2F%3E%0A%3C%2Fsvg%3E%0A") center/100% 100% no-repeat;pointer-events:none;z-index:1}
+#ag-captura .section-divider--hero{bottom:-1px}
+#ag-captura .section-divider--offer-top{top:-1px;transform:rotate(180deg)}
+#ag-captura .section-divider--offer-bottom{bottom:-1px;background:#f7f2eb}
+#ag-captura.capture-page .offer{padding-block:115px}
+#ag-captura.capture-page .intro h2,#ag-captura.capture-page .offer h2,#ag-captura.capture-page .library h2,#ag-captura.capture-page .about__copy h3,#ag-captura.capture-page .final-cta h2{font-family:Manrope,sans-serif;font-weight:700;font-style:normal}
+#ag-captura.capture-page .intro h2,#ag-captura.capture-page .library h2,#ag-captura.capture-page .about__copy h3{letter-spacing:-.07em}
+#ag-captura.capture-page .intro h2 em,#ag-captura.capture-page .offer h2 em,#ag-captura.capture-page .library h2 em,#ag-captura.capture-page .about__copy h3 em,#ag-captura.capture-page .final-cta h2 em{font-weight:inherit;font-style:normal}
+#ag-captura.capture-page .intro__grid{grid-template-columns:660px 440px;gap:100px}
+#ag-captura.capture-page .about__grid{grid-template-columns:1fr 1fr}
+#ag-captura.capture-page .about__copy h3{font-size:62px;line-height:1.18}
+#ag-captura.capture-page .final-cta .hero__event{justify-content:center;text-align:left;margin:0 0 40px}
+#ag-captura.capture-page .final-cta .campaign-logo{margin-bottom:31px}
+#ag-captura.capture-page .final-cta__inner{max-width:760px}
+#ag-captura.capture-page .final-cta h2{font-weight:400;max-width:609px;margin-inline:auto}
+#ag-captura.capture-page .footer .event-logo{width:300px}
+@media(max-width:1270px){
+#ag-captura.capture-page .intro__grid{grid-template-columns:1.2fr .8fr;gap:60px}
+#ag-captura.capture-page .hero h1.hero__title{font-size:clamp(48px,5.1vw,65px)}
+#ag-captura.capture-page .hero__lead{font-size:clamp(22px,2.15vw,27px)}
+#ag-captura.capture-page .hero__support{font-size:clamp(21px,2.2vw,28.28px);line-height:1.25}
+#ag-captura.capture-page .hero__inner{padding-top:100px}
+#ag-captura.capture-page .hero__image{background-position:58% top}
+#ag-captura.capture-page .about__copy h3{font-size:clamp(38px,4.8vw,62px)}
+}
+@media(max-width:900px){
+#ag-captura.capture-page .hero,#ag-captura.capture-page .hero__inner{min-height:900px}
+#ag-captura.capture-page .hero__inner{padding-block:75px 150px}
+#ag-captura.capture-page .hero__content{max-width:58%}
+#ag-captura.capture-page .hero__logo{width:min(411px,100%);margin-bottom:34px}
+#ag-captura.capture-page .hero h1.hero__title{margin-bottom:24px}
+#ag-captura.capture-page .hero .button{font-size:20px;padding-inline:18px}
+#ag-captura.capture-page .hero__support .hero__forever{font-size:30px}
+}
+@media(max-width:700px){
+#ag-captura.capture-page .hero,#ag-captura.capture-page .hero__inner{min-height:0}
+#ag-captura.capture-page .hero{display:flex;flex-direction:column;background:#1c0b11}
+#ag-captura.capture-page .hero__inner{padding-block:35px 24px;order:0}
+#ag-captura.capture-page .hero__content{width:100%;max-width:none;align-items:stretch}
+#ag-captura.capture-page .hero__logo{align-self:center;width:min(411px,100%);margin-bottom:32px}
+#ag-captura.capture-page .hero__event{align-self:flex-start;margin-bottom:25px}
+#ag-captura.capture-page .hero__image{position:relative;inset:auto;order:1;flex:none;width:100%;height:420px;background-size:auto 420px;background-position:69% center}
+#ag-captura.capture-page .hero__image::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#1c0b11,transparent 22%,transparent 80%,#1c0b11)}
+#ag-captura.capture-page .hero__shade{display:none}
+#ag-captura.capture-page .hero h1.hero__title{font-size:42px;line-height:1.1;letter-spacing:-.05em;margin-bottom:24px}
+#ag-captura.capture-page .hero__lead{font-size:21px;line-height:1.45;margin-bottom:24px}
+#ag-captura.capture-page .hero__support{font-size:21px;line-height:1.45;padding-left:18px}
+#ag-captura.capture-page .hero__support .hero__forever{font-size:30px;line-height:1.3}
+#ag-captura.capture-page .hero .button{font-size:18px;min-height:64px;padding-inline:16px;letter-spacing:-.04em;gap:10px}
+#ag-captura.capture-page .hero .button span{font-size:22px}
+#ag-captura.capture-page .intro__grid{grid-template-columns:1fr;gap:35px}
+#ag-captura.capture-page .offer{padding-block:80px}
+#ag-captura.capture-page .about__grid{grid-template-columns:1fr}
+#ag-captura.capture-page .final-cta .hero__event{align-self:center}
+#ag-captura.capture-page .about__copy h3{font-size:42px}
+}
+#ag-captura .modal{width:100%;max-width:none;height:100%;max-height:none;margin:0;border:0;background:transparent;color:var(--ink)}
+#ag-captura .modal::backdrop{background:transparent}
+</style>
+<div class="announcement" aria-label="Contagem regressiva para a revelação da oferta">
+    <div class="announcement__inner shell">
+      <span class="announcement__label">A OFERTA SERÁ REVELADA EM</span>
+      <div class="countdown" aria-label="Tempo restante">
+        <span class="countdown__item"><strong id="ag-captura-days">00</strong><small>dias</small></span>
+        <span class="countdown__colon">:</span>
+        <span class="countdown__item"><strong id="ag-captura-hours">00</strong><small>horas</small></span>
+        <span class="countdown__colon">:</span>
+        <span class="countdown__item"><strong id="ag-captura-minutes">00</strong><small>minutos</small></span>
+        <span class="countdown__colon">:</span>
+        <span class="countdown__item"><strong id="ag-captura-seconds">00</strong><small>segundos</small></span>
+      </div>
+    </div>
+  </div>
+
+  <header class="hero" id="ag-captura-inicio">
+    <div class="hero__image" aria-hidden="true"></div>
+    <div class="hero__shade" aria-hidden="true"></div>
+    <div class="shell hero__inner">
+      <div class="hero__content">
+        <img class="event-logo hero__logo" src="https://verus-std.github.io/ana-grossi-black-friday/assets/logo-black-ana.svg?v=2" width="411" height="80" alt="Black Friday Vitalício — Faturando com Corset e Tutu">
+        <h1 class="hero__title">A maior oferta<br>da história!</h1>
+        <p class="hero__lead"><strong>A Black Friday mais esperada</strong> para quem quer aprender a criar figurinos de ballet com uma condição que você nunca viu antes.</p>
+        <p class="hero__support">Garanta acesso a <strong>todos os cursos que já criei</strong> e a todos os que vou criar futuramente. <strong class="hero__forever">Para sempre.</strong></p>
+        <div class="hero__event"><span class="event-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4M7 2v4M15 2v4M3 9h16"/><circle cx="17" cy="17" r="5"/><path d="M17 14v3l2 1"/></svg></span><span><strong>04 de novembro</strong><small>às 20h • online</small></span></div>
+        <div class="hero__action">
+          <button class="button button--gold" data-open-form>Quero meu acesso vitalício <span aria-hidden="true">↗</span></button>
+          <p class="hero__hint">Clique acima e inscreva-se agora</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-divider section-divider--hero" aria-hidden="true"></div>
+  </header>
+
+  <main>
+    <section class="intro section" id="ag-captura-oportunidade">
+      <div class="shell intro__grid">
+        <div class="intro__heading">
+          <p class="eyebrow">BLACK FRIDAY • UMA OPORTUNIDADE ÚNICA</p>
+          <h2>Prepare-se para <em>criar mais.</em> E ir mais longe.</h2>
+        </div>
+        <div class="intro__body">
+          <p>Esta é a maior oportunidade que já criei para quem quer viver de figurinos de ballet.</p>
+          <div class="intro__divider"></div>
+          <div class="intro__stat"><strong>8<span>+</span></strong><span>cursos vitalícios e todos os que criarei daqui para frente</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="offer section" id="ag-captura-oferta">
+      <div class="section-divider section-divider--offer-top" aria-hidden="true"></div>
+      <div class="section-divider section-divider--offer-bottom" aria-hidden="true"></div>
+      <div class="shell offer__grid">
+        <div class="offer__narrative">
+          <p class="eyebrow eyebrow--light">BLACK FRIDAY ANA GROSSI</p>
+          <h2>Uma biblioteca inteira. <em>Um acesso para sempre.</em></h2>
+          <p>Em vez de adquirir cada conteúdo separadamente, você terá uma estrutura completa para aprender, praticar, criar e começar a faturar com seus próprios figurinos.</p>
+          <div class="offer__details"><span>✦</span> Moldes, técnicas e ferramentas para acompanhar toda a sua evolução.</div>
+        </div>
+        <div class="offer-card">
+          <p class="offer-card__top">A CONDIÇÃO ESPECIAL VEM AÍ</p>
+          <h3>A condição especial<br>da Black Friday.</h3>
+          <div class="price-line"><span>Comprando os conteúdos separadamente</span><s>R$ 1.498,00</s><small>Por apenas 1 ano de acesso</small></div>
+          <div class="price-line price-line--special"><span class="price-line__label">NA BLACK FRIDAY</span><strong><span aria-hidden="true">∞</span> Acesso vitalício</strong><p>Todos os cursos atuais e futuros.<br><b>Para sempre.</b></p><span class="price-line__reveal">Valor especial revelado em<br><b>04 de novembro, às 20h</b></span></div>
+          <p class="offer-card__note">Entre na lista para receber a condição especial da Black Friday.</p>
+          <button class="button button--wine" data-open-form>Quero garantir meu acesso <span aria-hidden="true">↗</span></button>
+          <small class="offer-card__foot">Inscrição para receber a oferta • 04 de novembro, às 20h</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="library section" id="ag-captura-conteudos">
+      <div class="shell">
+        <div class="library__head">
+          <div><p class="eyebrow">O QUE ESTÁ ESPERANDO POR VOCÊ</p><h2>Você não vai receber<br><em>apenas um curso.</em></h2></div>
+          <p>Uma verdadeira biblioteca de figurinos, moldes e ferramentas para acelerar sua evolução na costura de ballet.</p>
+        </div>
+        <div class="course-grid">
+          <article class="course-card"><span class="course-card__num">01 / MOLDES</span><span class="course-card__icon">✦</span><h3>Corset Reto Perfeito</h3><p class="course-card__subtitle">Kit de Moldes Profissionais — PP ao G</p><p>Uma base profissional para você não precisar começar a modelagem do zero.</p><div class="course-card__price">Valor individual <s>R$ 47,00</s></div></article>
+          <article class="course-card"><span class="course-card__num">02 / TÉCNICA</span><span class="course-card__icon">✂</span><h3>Do Zero ao Corset Perfeito em 4 Passos</h3><p>Um passo a passo para construir um corset com mais segurança, desde o início.</p><div class="course-card__price">Valor individual <s>R$ 97,00</s></div></article>
+          <article class="course-card"><span class="course-card__num">03 / MÉTODO</span><span class="course-card__icon">♛</span><h3>Faturando com Corset e Tutu</h3><p>O método principal para transformar sua habilidade com corsets e tutus em uma possibilidade de renda.</p><div class="course-card__price">Valor individual <s>R$ 797,00</s></div></article>
+          <article class="course-card"><span class="course-card__num">04 / TÉCNICA</span><span class="course-card__icon">✧</span><h3>Faturando com Tutu Clássico</h3><p>Aprenda a criar o tutu clássico e amplie seu repertório de figurinos.</p><div class="course-card__price">Valor individual <s>R$ 197,00</s></div></article>
+          <article class="course-card"><span class="course-card__num">05 / FIGURINO</span><span class="course-card__icon">❋</span><h3>Figurino de Camponesa em Tecido Plano</h3><p>Mais uma possibilidade de figurino para aprender, produzir e oferecer às suas clientes.</p><div class="course-card__price">Valor individual <s>R$ 197,00</s></div></article>
+          <article class="course-card"><span class="course-card__num">06 / MOLDES</span><span class="course-card__icon">◇</span><h3>Kit de Moldes para Figurino de Camponesa</h3><p class="course-card__subtitle">Blusa + Calcinha + Pala — PP ao GG</p><p>Bases prontas para facilitar a construção do figurino de camponesa.</p><div class="course-card__price">Valor individual <s>R$ 77,00</s></div></article>
+          <article class="course-card"><span class="course-card__num">07 / MOLDES</span><span class="course-card__icon">✧</span><h3>Kit de Moldes para Tutu de Balé</h3><p class="course-card__subtitle">Calcinha + Pala — PP ao GG</p><p>Uma base pronta para trabalhar diferentes tamanhos de figurinos.</p><div class="course-card__price">Valor individual <s>R$ 47,00</s></div></article>
+          <article class="course-card"><span class="course-card__num">08 / FERRAMENTA</span><span class="course-card__icon">▧</span><h3>Ficha de Atendimento para Figurinos de Balé</h3><p>Organize melhor o atendimento e profissionalize a experiência das suas clientes.</p><div class="course-card__price">Valor individual <s>R$ 19,00</s></div></article>
+        </div>
+        <div class="library__cta"><p>O próximo capítulo da sua história com o ballet pode começar agora.</p><button class="button button--wine" data-open-form>Quero garantir meu acesso <span aria-hidden="true">↗</span></button></div>
+      </div>
+    </section>
+
+    <section class="about section" id="ag-captura-ana">
+      <div class="shell about__panel">
+        <div class="about__header">
+          <div><p class="eyebrow">POR TRÁS DO MÉTODO</p><h2>Conheça a Ana</h2></div>
+          <div class="about__identity"><img src="https://verus-std.github.io/ana-grossi-black-friday/assets/ana-retrato.jpg" alt="" loading="lazy"><span><strong>Ana Grossi</strong><small>Figurinos de ballet</small></span></div>
+        </div>
+        <div class="about__grid">
+          <div class="about__photos">
+            <img class="about__photo about__photo--portrait" src="https://verus-std.github.io/ana-grossi-black-friday/assets/ana-retrato.jpg" alt="Retrato de Ana Grossi em seu ateliê" loading="lazy">
+            <img class="about__photo about__photo--work" src="https://verus-std.github.io/ana-grossi-black-friday/assets/ana-costura.jpg" alt="Ana Grossi em sua máquina de costura" loading="lazy">
+          </div>
+          <div class="about__copy"><h3>Quem é <em>Ana Grossi?</em></h3><p>Ana Grossi construiu sua experiência na prática, transformando anos de conhecimento em um método para ensinar figurinos de ballet.</p><p>Já ajudou <strong>mais de 700 alunas</strong> a evoluírem na criação de figurinos e desenvolverem novas habilidades.</p><p>Sua missão é simplificar aquilo que muitas costureiras acreditam ser difícil ou impossível. Ela ensina o caminho para dominar corsets, tutus e outros figurinos de ballet com mais segurança.</p><p>Foi para encurtar esse caminho que nasceu o <strong>Método Faturando com Corset e Tutu.</strong></p></div>
+        </div>
+        <div class="about__footer"><button class="button button--wine" data-open-form>Quero garantir meu acesso <span aria-hidden="true">↗</span></button></div>
+      </div>
+    </section>
+
+    <section class="final-cta section"><div class="shell final-cta__inner"><div class="hero__event"><span class="event-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4M7 2v4M15 2v4M3 9h16"/><circle cx="17" cy="17" r="5"/><path d="M17 14v3l2 1"/></svg></span><span><strong>04 de novembro</strong><small>às 20h • online</small></span></div><div class="campaign-logo"><img class="event-logo" src="https://verus-std.github.io/ana-grossi-black-friday/assets/logo-black-ana.svg?v=2" width="411" height="80" alt="Black Friday Vitalício — Faturando com Corset e Tutu"></div><h2>Seu talento merece<br><em>novas possibilidades.</em></h2><p>Todos os cursos atuais e futuros, <strong>para sempre.</strong></p><p>Entre na lista e receba a condição especial da <strong>Black Friday.</strong></p><button class="button button--gold" data-open-form>Quero meu acesso vitalício <span aria-hidden="true">↗</span></button></div></section>
+  </main>
+
+  <footer class="footer"><div class="shell footer__inner"><div class="campaign-logo campaign-logo--footer"><img class="event-logo" src="https://verus-std.github.io/ana-grossi-black-friday/assets/logo-black-ana.svg?v=2" width="411" height="80" alt="Black Friday Vitalício — Faturando com Corset e Tutu"></div><span>© 2026 Ana Grossi. Todos os direitos reservados.</span><a href="#ag-captura-inicio">Voltar ao topo ↑</a></div></footer>
+
+  <dialog aria-labelledby="ag-captura-modal-title" class="modal" id="ag-captura-signup-modal" hidden>
+    <div class="modal__backdrop" data-close-form></div>
+    <div class="modal__panel">
+      <button class="modal__close" type="button" data-close-form aria-label="Fechar formulário">×</button>
+      <p class="eyebrow">BLACK FRIDAY ANA GROSSI</p>
+      <h2 id="ag-captura-modal-title">Entre para a <em>lista especial.</em></h2>
+      <p>Preencha seus dados e siga para o grupo da Black Friday.</p>
+      <form id="ag-captura-signup-form" action="/obrigado/">
+        <label for="ag-captura-name">Seu nome</label><input id="ag-captura-name" name="name" type="text" autocomplete="name" placeholder="Como podemos chamar você?" required>
+        <label for="ag-captura-email">Seu melhor e-mail</label><input id="ag-captura-email" name="email" type="email" autocomplete="email" placeholder="voce@exemplo.com" required>
+        <label for="ag-captura-phone">Seu WhatsApp</label><input id="ag-captura-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(00) 00000-0000" required>
+        <button class="button button--wine" type="submit" disabled>Continuar <span aria-hidden="true">↗</span></button>
+      </form>
+    </div>
+  </dialog>
+<script>
+
+(() => {
+  const root = document.currentScript.closest('.ag-widget');
+  if (!root || root.dataset.agReady) return;
+  root.dataset.agReady = 'true';
+  const controller = new AbortController();
+  const on = (node, event, handler) => node.addEventListener(event, handler, {signal: controller.signal});
+  const $ = selector => root.querySelector(selector);
+  const target = new Date(root.dataset.eventDate).getTime();
+  const units = ['days', 'hours', 'minutes', 'seconds'].map(id => $('#ag-captura-' + id));
+  const countdown = () => {
+    const seconds = Math.max(0, Math.floor((target - Date.now()) / 1000));
+    [Math.floor(seconds / 86400), Math.floor(seconds / 3600) % 24, Math.floor(seconds / 60) % 60, seconds % 60]
+      .forEach((value, index) => { units[index].textContent = String(value).padStart(2, '0'); });
+  };
+  countdown();
+  const timer = setInterval(countdown, 1000);
+  const modal = $('#ag-captura-signup-modal');
+  let previousFocus, savedOverflow;
+  const unlock = () => {
+    if (savedOverflow !== undefined) {
+      document.body.style.overflow = savedOverflow;
+      savedOverflow = undefined;
+    }
+  };
+  const close = () => {
+    modal.close();
+    modal.hidden = true;
+    unlock();
+    if (previousFocus?.isConnected) previousFocus.focus();
+  };
+  root.querySelectorAll('[data-open-form]').forEach(button => on(button, 'click', () => {
+    previousFocus = document.activeElement;
+    savedOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    modal.hidden = false;
+    modal.showModal();
+    $('#ag-captura-name').focus();
+  }));
+  root.querySelectorAll('[data-close-form]').forEach(button => on(button, 'click', close));
+  on(modal, 'cancel', event => { event.preventDefault(); close(); });
+  on(modal, 'close', () => { modal.hidden = true; unlock(); });
+  on($('#ag-captura-signup-form'), 'submit', event => {
+    event.preventDefault();
+    // Etapa visual: não envia nem armazena os dados. Integrar a captação antes do lançamento.
+    window.location.assign(root.dataset.thankYouUrl);
+  });
+  // Impede envio nativo de dados caso scripts sejam removidos pelo WordPress.
+  $('#ag-captura-signup-form button[type="submit"]').disabled = false;
+  root.querySelectorAll('a[href^="#ag-captura-"]').forEach(link => on(link, 'click', event => {
+    const target = $(link.getAttribute('href'));
+    if (!target) return;
+    event.preventDefault();
+    target.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
+  }));
+  // Libera listeners e contador se o Elementor reconstruir o widget no editor.
+  const observer = new MutationObserver(() => {
+    if (root.isConnected) return;
+    clearInterval(timer); controller.abort(); unlock(); observer.disconnect();
+  });
+  observer.observe(document.body, {childList: true, subtree: true});
+})();
+</script>
+</div>

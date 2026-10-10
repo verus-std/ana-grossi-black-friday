@@ -15,3 +15,9 @@ Para visualizar localmente: `python3 -m http.server 8000` e acesse `http://local
 ## Primeira versão
 
 A primeira versão publicada (commit `368be0a`) está preservada em `/versao-antiga/`, com seus próprios estilos, scripts, imagens e página de obrigado.
+
+## Elementor
+
+`elementor/ana-grossi-elementor.zip` reúne os widgets de captura e obrigado, prévias e imagens. Copie o conteúdo de cada `*-widget.txt` em um único widget HTML. As instruções e configurações dos links estão em `elementor/LEIA-ME.txt`. Os formulários continuam sem integração de captação.
+
+Para atualizar o pacote a partir das páginas atuais, execute `python3 tools/build_elementor.py`. Os estilos são limitados ao widget, os IDs recebem prefixos, o divisor fica incorporado e as imagens usam URLs completas. As prévias simulam regras globais de tema; a instalação real no Elementor ainda deve ser conferida.

@@ -1,0 +1,67 @@
+ANA GROSSI — WIDGETS HTML PARA ELEMENTOR
+
+INSTALAÇÃO
+1. Crie ou edite a página de captura no WordPress com Elementor.
+2. Nas configurações da página, escolha o layout Elementor Canvas.
+3. Use um contêiner de largura total (100%), sem largura máxima,
+   sem espaçamento entre elementos e com margem e preenchimento em 0.
+4. Insira UM widget HTML. Abra captura-widget.txt em um editor de texto,
+   copie TODO o conteúdo e cole no campo do widget. Não use um widget Texto.
+5. Crie a página de obrigado e repita com obrigado-widget.txt.
+6. Publique e confira em uma nova aba, também no celular. O comportamento
+   dos scripts na prévia do editor pode ser diferente da página publicada.
+
+CONFIGURAÇÃO DOS LINKS (no início de cada arquivo)
+Captura: data-thank-you-url="/obrigado/"
+  Troque pelo endereço da sua página de obrigado, inclusive se o WordPress
+  estiver instalado em uma subpasta. Pode usar uma URL completa.
+  data-event-date define o contador com o horário de Brasília (-03:00).
+
+Obrigado: data-capture-url="/black-friday/"
+  Troque pelo endereço da sua página de captura.
+  data-whatsapp-url=""
+  Cole o convite do grupo entre as aspas quando estiver disponível.
+  Enquanto estiver vazio, o botão mostra a mensagem de grupo em breve.
+
+FORMULÁRIO
+O formulário continua sendo uma etapa visual: valida os campos e abre
+a página de obrigado, mas NÃO envia, armazena ou cadastra os dados.
+É necessário integrar sua plataforma de captação antes do lançamento.
+Se os scripts forem removidos, o envio permanece desabilitado para evitar
+que os dados apareçam na URL. Não existe integração com Elementor Forms.
+
+IMAGENS E FONTES
+Os widgets já usam imagens com URLs completas do GitHub Pages da Verus.
+Não é necessário enviar imagens para testar. As fontes vêm do Google Fonts.
+O divisor está incorporado no CSS, para funcionar em outro domínio.
+
+Para hospedar as imagens no WordPress, envie os arquivos da pasta assets
+e substitua cada URL correspondente nos dois widgets pela URL da sua
+Biblioteca de Mídia. A logo SVG depende do suporte a esse formato no seu
+WordPress; ela pode permanecer no endereço atual.
+As imagens não estão embutidas em base64, evitando deixar o editor pesado.
+
+O QUE ESTÁ INCLUÍDO
+- captura-widget.txt: conteúdo completo para UM widget HTML da captura.
+- obrigado-widget.txt: conteúdo completo para UM widget HTML de obrigado.
+- previa-captura.html e previa-obrigado.html: prévias para abrir no navegador.
+  Os links entre essas prévias são locais apenas para conferência.
+- assets: cópia das imagens e vetores.
+
+Os estilos estão limitados aos blocos #ag-captura e #ag-obrigado; os scripts
+são isolados e não usam jQuery. Use cada widget uma única vez por página.
+Não ative efeitos de entrada, movimento ou transformações no contêiner.
+O formulário utiliza uma janela nativa do navegador sobre a página.
+O código foi conferido em uma página local que simula estilos globais de
+tema. A instalação real do WordPress/Elementor ainda precisa ser conferida.
+
+SEO E CONFIGURAÇÕES DO WORDPRESS
+Defina o título, a descrição e a indexação no WordPress/plugin de SEO.
+Não são inseridas tags html, head ou body dentro dos widgets.
+Configure a página de obrigado como não indexável no plugin de SEO.
+Se a sua instalação retirar tags script ao salvar, use uma conta autorizada
+a inserir código HTML/JavaScript e confira as políticas do seu WordPress.
+
+REFERÊNCIAS OFICIAIS
+https://elementor.com/help/html-widget/
+https://elementor.com/help/using-elementors-canvas-page-template/
