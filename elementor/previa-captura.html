@@ -4,11 +4,17 @@ Imagens hospedadas no GitHub Pages; podem ser substituídas pelas URLs da Biblio
 -->
 <div id="ag-captura" class="ag-widget capture-page" lang="pt-BR"
   data-thank-you-url="previa-obrigado.html"
-  data-event-date="2026-11-04T20:00:00-03:00">
+  data-event-date="2026-11-04T20:00:00-03:00"
+  data-signup-url="https://docs.google.com/forms/u/0/d/e/1FAIpQLSesqgs8C93wrMTUBx5G3-d0_HWc4VWLtqYnhVxAD3VEPht8SQ/formResponse"
+  data-entry-name="entry.673688892"
+  data-entry-email="entry.28353585"
+  data-entry-phone="entry.380153872">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 
 #ag-captura{display:block;position:relative;width:100%;max-width:none;margin:0;padding:0;text-align:left;font:400 16px/normal 'DM Sans',sans-serif;letter-spacing:normal;text-transform:none;isolation:isolate}
+.elementor .e-con:has(#ag-captura),.elementor .e-con-inner:has(#ag-captura){width:100%;max-width:none;padding:0;gap:0;--container-max-width:100%;--padding-top:0px;--padding-bottom:0px;--padding-left:0px;--padding-right:0px}
+body:has(#ag-captura) .wpp-btn{display:none!important}
 #ag-captura,#ag-captura *,#ag-captura *::before,#ag-captura *::after{box-sizing:border-box}
 #ag-captura :where(h1,h2,h3,h4,p,ol,ul,figure){margin:0 0 1em;padding:0;color:inherit;font-family:inherit;letter-spacing:normal;text-transform:none}
 #ag-captura :where(h1,h2,h3,h4){font-weight:700;line-height:1.2}
@@ -626,12 +632,12 @@ Imagens hospedadas no GitHub Pages; podem ser substituídas pelas URLs da Biblio
       <p class="eyebrow">BLACK FRIDAY ANA GROSSI</p>
       <h2 id="ag-captura-modal-title">Entre para a <em>lista especial.</em></h2>
       <p>Preencha seus dados e siga para o grupo da Black Friday.</p>
-      <form id="ag-captura-signup-form" action="/obrigado/">
-        <label for="ag-captura-name">Seu nome</label><input id="ag-captura-name" name="name" type="text" autocomplete="name" placeholder="Como podemos chamar você?" required>
-        <label for="ag-captura-email">Seu melhor e-mail</label><input id="ag-captura-email" name="email" type="email" autocomplete="email" placeholder="voce@exemplo.com" required>
+      <form id="ag-captura-signup-form" action="/black2026-obrigado/">
+        <label for="ag-captura-name">Seu nome</label><input id="ag-captura-name" name="name" maxlength="120" type="text" autocomplete="name" placeholder="Como podemos chamar você?" required>
+        <label for="ag-captura-email">Seu melhor e-mail</label><input id="ag-captura-email" name="email" maxlength="254" type="email" autocomplete="email" placeholder="voce@exemplo.com" required>
         <label for="ag-captura-phone">Seu WhatsApp</label><input id="ag-captura-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(00) 00000-0000" required>
         <button class="button button--wine" type="submit" disabled>Continuar <span aria-hidden="true">↗</span></button>
-      </form>
+      <div hidden aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div><p id="ag-captura-form-status" role="status" aria-live="polite" style="font-size:14px;line-height:1.5;margin-top:12px"></p><small style="display:block;line-height:1.5;margin-top:12px">Ao continuar, você concorda em receber informações sobre a Black Friday de Ana Grossi pelos contatos informados.</small></form>
     </div>
   </dialog>
 <script>
@@ -677,10 +683,50 @@ Imagens hospedadas no GitHub Pages; podem ser substituídas pelas URLs da Biblio
   root.querySelectorAll('[data-close-form]').forEach(button => on(button, 'click', close));
   on(modal, 'cancel', event => { event.preventDefault(); close(); });
   on(modal, 'close', () => { modal.hidden = true; unlock(); });
-  on($('#ag-captura-signup-form'), 'submit', event => {
+  const form = $('#ag-captura-signup-form');
+  const submitButton = form.querySelector('[type="submit"]');
+  const status = $('#ag-captura-form-status');
+  const phone = $('#ag-captura-phone');
+  on(phone, 'input', () => phone.setCustomValidity(''));
+  let sending = false;
+  on(form, 'submit', async event => {
     event.preventDefault();
-    // Etapa visual: não envia nem armazena os dados. Integrar a captação antes do lançamento.
-    window.location.assign(root.dataset.thankYouUrl);
+    if (sending) return;
+    const fields = new FormData(form);
+    const digits = String(fields.get('phone') || '').replace(/\D/g, '');
+    if (!/^\d{10,15}$/.test(digits)) {
+      phone.setCustomValidity('Informe seu WhatsApp com DDD.');
+      phone.reportValidity();
+      return;
+    }
+    const payload = new URLSearchParams({
+      [root.dataset.entryName]: String(fields.get('name') || '').trim(),
+      [root.dataset.entryEmail]: String(fields.get('email') || '').trim(),
+      [root.dataset.entryPhone]: digits
+    });
+    sending = true;
+    submitButton.disabled = true;
+    submitButton.textContent = 'Enviando…';
+    status.textContent = 'Aguarde a confirmação da sua inscrição.';
+    const timeout = new AbortController();
+    const timeoutId = setTimeout(() => timeout.abort(), 30000);
+    try {
+      if (!root.dataset.signupUrl) throw new Error('missing_endpoint');
+      await fetch(root.dataset.signupUrl, {
+        method: 'POST', mode: 'no-cors',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'},
+        body: payload, credentials: 'omit', signal: timeout.signal
+      });
+      status.textContent = 'Inscrição recebida! Abrindo o próximo passo…';
+      window.location.assign(root.dataset.thankYouUrl);
+    } catch (error) {
+      status.textContent = 'Não foi possível confirmar sua inscrição. Confira a conexão e tente novamente. Seus dados continuam preenchidos.';
+      sending = false;
+      submitButton.disabled = false;
+      submitButton.textContent = 'Tentar novamente ↗';
+    } finally {
+      clearTimeout(timeoutId);
+    }
   });
   // Impede envio nativo de dados caso scripts sejam removidos pelo WordPress.
   $('#ag-captura-signup-form button[type="submit"]').disabled = false;

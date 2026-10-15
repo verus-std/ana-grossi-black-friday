@@ -55,6 +55,8 @@ def scope_css(text, root):
 
 BASE_RESET = '''
 ROOT{display:block;position:relative;width:100%;max-width:none;margin:0;padding:0;text-align:left;font:400 16px/normal 'DM Sans',sans-serif;letter-spacing:normal;text-transform:none;isolation:isolate}
+.elementor .e-con:has(ROOT),.elementor .e-con-inner:has(ROOT){width:100%;max-width:none;padding:0;gap:0;--container-max-width:100%;--padding-top:0px;--padding-bottom:0px;--padding-left:0px;--padding-right:0px}
+body:has(ROOT) .wpp-btn{display:none!important}
 ROOT,ROOT *,ROOT *::before,ROOT *::after{box-sizing:border-box}
 ROOT :where(h1,h2,h3,h4,p,ol,ul,figure){margin:0 0 1em;padding:0;color:inherit;font-family:inherit;letter-spacing:normal;text-transform:none}
 ROOT :where(h1,h2,h3,h4){font-weight:700;line-height:1.2}
@@ -110,10 +112,50 @@ CAPTURE_JS = r'''
   root.querySelectorAll('[data-close-form]').forEach(button => on(button, 'click', close));
   on(modal, 'cancel', event => { event.preventDefault(); close(); });
   on(modal, 'close', () => { modal.hidden = true; unlock(); });
-  on($('#ag-captura-signup-form'), 'submit', event => {
+  const form = $('#ag-captura-signup-form');
+  const submitButton = form.querySelector('[type="submit"]');
+  const status = $('#ag-captura-form-status');
+  const phone = $('#ag-captura-phone');
+  on(phone, 'input', () => phone.setCustomValidity(''));
+  let sending = false;
+  on(form, 'submit', async event => {
     event.preventDefault();
-    // Etapa visual: não envia nem armazena os dados. Integrar a captação antes do lançamento.
-    window.location.assign(root.dataset.thankYouUrl);
+    if (sending) return;
+    const fields = new FormData(form);
+    const digits = String(fields.get('phone') || '').replace(/\D/g, '');
+    if (!/^\d{10,15}$/.test(digits)) {
+      phone.setCustomValidity('Informe seu WhatsApp com DDD.');
+      phone.reportValidity();
+      return;
+    }
+    const payload = new URLSearchParams({
+      [root.dataset.entryName]: String(fields.get('name') || '').trim(),
+      [root.dataset.entryEmail]: String(fields.get('email') || '').trim(),
+      [root.dataset.entryPhone]: digits
+    });
+    sending = true;
+    submitButton.disabled = true;
+    submitButton.textContent = 'Enviando…';
+    status.textContent = 'Aguarde a confirmação da sua inscrição.';
+    const timeout = new AbortController();
+    const timeoutId = setTimeout(() => timeout.abort(), 30000);
+    try {
+      if (!root.dataset.signupUrl) throw new Error('missing_endpoint');
+      await fetch(root.dataset.signupUrl, {
+        method: 'POST', mode: 'no-cors',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'},
+        body: payload, credentials: 'omit', signal: timeout.signal
+      });
+      status.textContent = 'Inscrição recebida! Abrindo o próximo passo…';
+      window.location.assign(root.dataset.thankYouUrl);
+    } catch (error) {
+      status.textContent = 'Não foi possível confirmar sua inscrição. Confira a conexão e tente novamente. Seus dados continuam preenchidos.';
+      sending = false;
+      submitButton.disabled = false;
+      submitButton.textContent = 'Tentar novamente ↗';
+    } finally {
+      clearTimeout(timeoutId);
+    }
   });
   // Impede envio nativo de dados caso scripts sejam removidos pelo WordPress.
   $('#ag-captura-signup-form button[type="submit"]').disabled = false;
@@ -167,10 +209,12 @@ def build(source, name, page_class, config, script):
         body = body.replace('<div class="modal"', '<dialog aria-labelledby="ag-captura-modal-title" class="modal"')
         body = re.sub(r'</div>\s*$', '</dialog>', body)
         body = body.replace(' role="dialog" aria-modal="true" aria-labelledby="ag-captura-modal-title"', '')
-        body = body.replace('action="obrigado.html"', 'action="/obrigado/"')
+        body = body.replace('action="obrigado.html"', 'action="/black2026-obrigado/"')
         body = body.replace('type="submit"', 'type="submit" disabled')
+        body = body.replace('name="name"', 'name="name" maxlength="120"').replace('name="email"', 'name="email" maxlength="254"')
+        body = body.replace('</form>', '<div hidden aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div><p id="ag-captura-form-status" role="status" aria-live="polite" style="font-size:14px;line-height:1.5;margin-top:12px"></p><small style="display:block;line-height:1.5;margin-top:12px">Ao continuar, você concorda em receber informações sobre a Black Friday de Ana Grossi pelos contatos informados.</small></form>')
     else:
-        body = body.replace('href="index.html"', 'href="/black-friday/" data-capture-link')
+        body = body.replace('href="index.html"', 'href="/black2026/" data-capture-link')
     css = BASE_RESET.replace('ROOT', root) + scope_css(CSS, root)
     if name == 'captura':
         css += f'{root} .modal{{width:100%;max-width:none;height:100%;max-height:none;margin:0;border:0;background:transparent;color:var(--ink)}}\n'
@@ -192,13 +236,13 @@ Imagens hospedadas no GitHub Pages; podem ser substituídas pelas URLs da Biblio
     (OUT / f'{name}-widget.txt').write_text(widget)
     # Local preview has typical broad theme styles, to check widget style isolation.
     preview = f'''<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Ana Grossi — prévia {name} Elementor</title><style>body{{margin:0;font-family:serif}}h1,h2,h3{{color:blue;font-family:serif}}button{{background:purple;border-radius:99px}}img{{border-radius:40px}}.elementor-widget-container{{width:100%;padding:0}}</style></head><body><div class="elementor-widget-container">{widget}</div></body></html>'''
-    preview = preview.replace('data-thank-you-url="/obrigado/"', 'data-thank-you-url="previa-obrigado.html"').replace('data-capture-url="/black-friday/"', 'data-capture-url="previa-captura.html"')
+    preview = preview.replace('data-thank-you-url="/black2026-obrigado/"', 'data-thank-you-url="previa-obrigado.html"').replace('data-capture-url="/black2026/"', 'data-capture-url="previa-captura.html"')
     (OUT / f'previa-{name}.html').write_text(preview)
 
 
 OUT.mkdir(exist_ok=True)
-build('index.html', 'captura', 'capture-page', 'data-thank-you-url="/obrigado/"\n  data-event-date="2026-11-04T20:00:00-03:00"', CAPTURE_JS)
-build('obrigado.html', 'obrigado', 'thanks-page', 'data-capture-url="/black-friday/"\n  data-whatsapp-url=""', THANKS_JS)
+build('index.html', 'captura', 'capture-page', 'data-thank-you-url="/black2026-obrigado/"\n  data-event-date="2026-11-04T20:00:00-03:00"\n  data-signup-url="https://docs.google.com/forms/u/0/d/e/1FAIpQLSesqgs8C93wrMTUBx5G3-d0_HWc4VWLtqYnhVxAD3VEPht8SQ/formResponse"\n  data-entry-name="entry.673688892"\n  data-entry-email="entry.28353585"\n  data-entry-phone="entry.380153872"', CAPTURE_JS)
+build('obrigado.html', 'obrigado', 'thanks-page', 'data-capture-url="/black2026/"\n  data-whatsapp-url="https://chat.whatsapp.com/Itsinsh80ULEvTaYAughkx?s=cl&amp;p=a&amp;mlu=4&amp;ilr=4"', THANKS_JS)
 shutil.copytree(ROOT / 'assets', OUT / 'assets', dirs_exist_ok=True)
 with zipfile.ZipFile(OUT / 'ana-grossi-elementor.zip', 'w', zipfile.ZIP_DEFLATED) as archive:
     for path in sorted(OUT.rglob('*')):
