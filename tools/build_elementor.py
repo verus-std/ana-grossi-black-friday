@@ -107,7 +107,7 @@ CAPTURE_JS = r'''
     document.body.style.overflow = 'hidden';
     modal.hidden = false;
     modal.showModal();
-    $('#ag-captura-name').focus();
+    $('#ag-captura-email').focus();
   }));
   root.querySelectorAll('[data-close-form]').forEach(button => on(button, 'click', close));
   on(modal, 'cancel', event => { event.preventDefault(); close(); });
@@ -129,7 +129,6 @@ CAPTURE_JS = r'''
       return;
     }
     const payload = new URLSearchParams({
-      [root.dataset.entryName]: String(fields.get('name') || '').trim(),
       [root.dataset.entryEmail]: String(fields.get('email') || '').trim(),
       [root.dataset.entryPhone]: digits
     });
@@ -180,15 +179,20 @@ THANKS_JS = r'''
   if (!root || root.dataset.agReady) return;
   root.dataset.agReady = 'true';
   root.querySelectorAll('[data-capture-link]').forEach(link => { link.href = root.dataset.captureUrl; });
+  const goToWhatsApp = () => window.location.assign(root.dataset.whatsappUrl.trim());
   root.querySelectorAll('[data-whatsapp-group]').forEach(button => {
-    button.addEventListener('click', () => {
-      if (root.dataset.whatsappUrl.trim()) {
-        window.location.assign(root.dataset.whatsappUrl.trim());
-      } else {
-        root.querySelector('#ag-obrigado-group-dialog').showModal();
-      }
-    });
+    button.addEventListener('click', goToWhatsApp);
   });
+  if (root.dataset.autoRedirect !== 'true' || location.search.includes('elementor-preview')) return;
+  const countdown = root.querySelector('[data-redirect-countdown]');
+  let remaining = 5;
+  const timer = setInterval(() => {
+    remaining -= 1;
+    if (countdown) countdown.textContent = String(Math.max(remaining, 0));
+    if (remaining > 0) return;
+    clearInterval(timer);
+    goToWhatsApp();
+  }, 1000);
 })();
 '''
 
@@ -211,7 +215,7 @@ def build(source, name, page_class, config, script):
         body = body.replace(' role="dialog" aria-modal="true" aria-labelledby="ag-captura-modal-title"', '')
         body = body.replace('action="obrigado.html"', 'action="/black2026-obrigado/"')
         body = body.replace('type="submit"', 'type="submit" disabled')
-        body = body.replace('name="name"', 'name="name" maxlength="120"').replace('name="email"', 'name="email" maxlength="254"')
+        body = body.replace('name="email"', 'name="email" maxlength="254"')
         body = body.replace('</form>', '<div hidden aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div><p id="ag-captura-form-status" role="status" aria-live="polite" style="font-size:14px;line-height:1.5;margin-top:12px"></p><small style="display:block;line-height:1.5;margin-top:12px">Ao continuar, você concorda em receber informações sobre a Black Friday de Ana Grossi pelos contatos informados.</small></form>')
     else:
         body = body.replace('href="index.html"', 'href="/black2026/" data-capture-link')
@@ -236,13 +240,13 @@ Imagens hospedadas no GitHub Pages; podem ser substituídas pelas URLs da Biblio
     (OUT / f'{name}-widget.txt').write_text(widget)
     # Local preview has typical broad theme styles, to check widget style isolation.
     preview = f'''<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Ana Grossi — prévia {name} Elementor</title><style>body{{margin:0;font-family:serif}}h1,h2,h3{{color:blue;font-family:serif}}button{{background:purple;border-radius:99px}}img{{border-radius:40px}}.elementor-widget-container{{width:100%;padding:0}}</style></head><body><div class="elementor-widget-container">{widget}</div></body></html>'''
-    preview = preview.replace('data-thank-you-url="/black2026-obrigado/"', 'data-thank-you-url="previa-obrigado.html"').replace('data-capture-url="/black2026/"', 'data-capture-url="previa-captura.html"')
+    preview = preview.replace('data-thank-you-url="/black2026-obrigado/"', 'data-thank-you-url="previa-obrigado.html"').replace('data-capture-url="/black2026/"', 'data-capture-url="previa-captura.html"').replace('data-auto-redirect="true"', 'data-auto-redirect="false"')
     (OUT / f'previa-{name}.html').write_text(preview)
 
 
 OUT.mkdir(exist_ok=True)
-build('index.html', 'captura', 'capture-page', 'data-thank-you-url="/black2026-obrigado/"\n  data-event-date="2026-11-04T20:00:00-03:00"\n  data-signup-url="https://docs.google.com/forms/u/0/d/e/1FAIpQLSesqgs8C93wrMTUBx5G3-d0_HWc4VWLtqYnhVxAD3VEPht8SQ/formResponse"\n  data-entry-name="entry.673688892"\n  data-entry-email="entry.28353585"\n  data-entry-phone="entry.380153872"', CAPTURE_JS)
-build('obrigado.html', 'obrigado', 'thanks-page', 'data-capture-url="/black2026/"\n  data-whatsapp-url="https://chat.whatsapp.com/Itsinsh80ULEvTaYAughkx?s=cl&amp;p=a&amp;mlu=4&amp;ilr=4"', THANKS_JS)
+build('index.html', 'captura', 'capture-page', 'data-thank-you-url="/black2026-obrigado/"\n  data-event-date="2026-11-04T20:00:00-03:00"\n  data-signup-url="https://docs.google.com/forms/u/0/d/e/1FAIpQLSesqgs8C93wrMTUBx5G3-d0_HWc4VWLtqYnhVxAD3VEPht8SQ/formResponse"\n  data-entry-email="entry.28353585"\n  data-entry-phone="entry.380153872"', CAPTURE_JS)
+build('obrigado.html', 'obrigado', 'thanks-page', 'data-capture-url="/black2026/"\n  data-whatsapp-url="https://chat.whatsapp.com/Itsinsh80ULEvTaYAughkx?s=cl&amp;p=a&amp;mlu=4&amp;ilr=4"\n  data-auto-redirect="true"', THANKS_JS)
 shutil.copytree(ROOT / 'assets', OUT / 'assets', dirs_exist_ok=True)
 with zipfile.ZipFile(OUT / 'ana-grossi-elementor.zip', 'w', zipfile.ZIP_DEFLATED) as archive:
     for path in sorted(OUT.rglob('*')):

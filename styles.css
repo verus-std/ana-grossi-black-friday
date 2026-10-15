@@ -187,6 +187,40 @@ a{color:inherit;text-decoration:none}
   .group-card .button{font-size:11px;gap:12px;padding-inline:15px}
   .thanks-stage::before{inset:15px -45% -150px}
 }
+
+/* Página de obrigado em uma única dobra. */
+.thanks-page{min-height:100dvh;overflow:hidden}
+.thanks-page .thanks-header{height:92px;min-height:92px;padding:16px}
+.thanks-page .thanks-header .event-logo{display:block;width:min(320px,78vw);height:auto}
+.thanks-page main{min-height:calc(100dvh - 92px)}
+.thanks-page .thanks-stage{min-height:calc(100dvh - 92px);display:grid;align-items:center;border-bottom:0}
+.thanks-page .thanks-stage__inner{width:min(100% - 40px,760px);padding-block:24px 30px}
+.thanks-page .signup-steps{margin-bottom:24px}
+.thanks-page .thanks-stage h1{font-size:clamp(38px,4.2vw,60px);margin-bottom:14px}
+.thanks-page .thanks-stage__lead{margin-bottom:18px;font-size:17px}
+.thanks-page .group-card{padding:20px 34px 22px}
+.thanks-page .group-card__icon{width:32px;height:32px;margin-bottom:5px}
+.thanks-page .group-card h2{font-size:27px;margin-bottom:8px}
+.thanks-page .group-card>p{font-size:15px;margin-bottom:16px}
+.thanks-page .group-card__hint{font-size:13px;margin-top:12px}
+.thanks-page .thanks-date{margin-top:18px}
+@media(max-width:700px){
+  .thanks-page{overflow:auto}
+  .thanks-page .thanks-header{height:78px;min-height:78px;padding:12px}
+  .thanks-page main,.thanks-page .thanks-stage{min-height:calc(100dvh - 78px)}
+  .thanks-page .thanks-stage__inner{width:min(100% - 28px,760px);padding-block:18px 22px}
+  .thanks-page .signup-steps{margin-bottom:18px}
+  .thanks-page .thanks-stage .eyebrow{font-size:11px;margin-bottom:8px}
+  .thanks-page .thanks-stage h1{font-size:clamp(34px,10vw,46px);line-height:1.06;margin-bottom:10px}
+  .thanks-page .thanks-stage__lead{font-size:14px;line-height:1.45;margin-bottom:12px}
+  .thanks-page .group-card{padding:16px 18px 17px}
+  .thanks-page .group-card__icon{width:28px;height:28px}
+  .thanks-page .group-card h2{font-size:23px}
+  .thanks-page .group-card>p{font-size:13px;line-height:1.45;margin-bottom:12px}
+  .thanks-page .group-card .button{min-height:52px}
+  .thanks-page .group-card__hint{font-size:12px;margin-top:9px}
+  .thanks-page .thanks-date{margin-top:12px}
+}
 @media(max-width:1000px){.offer__grid{gap:50px}.about__grid{gap:28px;padding:32px}.about__header{padding-inline:32px}.about__photos,.about__photo{min-height:520px;height:520px}.about__copy>p:not(.eyebrow){font-size:14px}.course-grid{grid-template-columns:repeat(2,1fr)}.course-card{min-height:290px}.intro__grid{gap:45px}}
 @media(max-width:700px){.shell{width:min(100% - 38px,1200px)}.section{padding:75px 0}.announcement__inner{min-height:70px;gap:9px;flex-direction:column;padding:8px 0}.announcement__label{font-size:9px}.countdown__item strong{font-size:17px}.countdown__item small{font-size:8px}.countdown__colon{font-size:14px}.hero__inner{padding-top:25px}.hero__edition{font-size:11px}.hero h1{font-size:clamp(48px,11vw,67px)}.hero__lifetime{font-size:9px;margin-left:5px}.hero__lead{font-size:15px}.hero__support{font-size:13px}.hero__side-note{display:none}.hero .button{width:100%;gap:15px}.intro__grid,.offer__grid{grid-template-columns:1fr;gap:36px}.intro__body>p{font-size:17px}.intro__stat strong{font-size:65px}.offer-card{padding:32px 25px;box-shadow:12px 12px 0 rgba(181,134,101,.17)}.offer-card h3{font-size:33px}.library__head{display:block;margin-bottom:30px}.library__head>p{margin-top:20px;font-size:14px}.course-grid{grid-template-columns:1fr 1fr;gap:10px}.course-card{padding:19px;min-height:300px}.course-card h3{font-size:19px}.library__cta{display:block}.library__cta p{margin-bottom:20px}.library__cta .button{width:100%;gap:10px}.footer__inner{padding:26px 0;flex-direction:column;text-align:center;gap:20px}.final-cta .button{width:100%;gap:10px}.modal__panel{padding:36px 25px 25px}.modal__panel h2{font-size:34px}}
 @media(max-width:480px){.course-grid{grid-template-columns:1fr}.course-card{min-height:0}.course-card__icon{margin:10px 0}.course-card h3{font-size:22px}.course-card__price{margin-top:15px}.hero h1{font-size:clamp(45px,11vw,54px)}.hero__lifetime{display:table;margin:14px 0 0}.price-line{font-size:11px}.brand__name{font-size:13px}.brand__name small{font-size:6px}.brand__mark{width:34px;height:34px}}

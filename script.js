@@ -11,7 +11,7 @@ updateCountdown();
 setInterval(updateCountdown, 1000);
 
 const modal = document.getElementById('signup-modal');
-const firstInput = document.getElementById('name');
+const firstInput = document.getElementById('email');
 let previousFocus = null;
 
 function openModal() {

@@ -6,7 +6,6 @@ Imagens hospedadas no GitHub Pages; podem ser substituídas pelas URLs da Biblio
   data-thank-you-url="previa-obrigado.html"
   data-event-date="2026-11-04T20:00:00-03:00"
   data-signup-url="https://docs.google.com/forms/u/0/d/e/1FAIpQLSesqgs8C93wrMTUBx5G3-d0_HWc4VWLtqYnhVxAD3VEPht8SQ/formResponse"
-  data-entry-name="entry.673688892"
   data-entry-email="entry.28353585"
   data-entry-phone="entry.380153872">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -213,6 +212,38 @@ body:has(#ag-captura) .wpp-btn{display:none!important}
 #ag-captura .group-card h2{font-size:26px}
 #ag-captura .group-card .button{font-size:11px;gap:12px;padding-inline:15px}
 #ag-captura .thanks-stage::before{inset:15px -45% -150px}
+}
+#ag-captura.thanks-page{min-height:100dvh;overflow:hidden}
+#ag-captura.thanks-page .thanks-header{height:92px;min-height:92px;padding:16px}
+#ag-captura.thanks-page .thanks-header .event-logo{display:block;width:min(320px,78vw);height:auto}
+#ag-captura.thanks-page main{min-height:calc(100dvh - 92px)}
+#ag-captura.thanks-page .thanks-stage{min-height:calc(100dvh - 92px);display:grid;align-items:center;border-bottom:0}
+#ag-captura.thanks-page .thanks-stage__inner{width:min(100% - 40px,760px);padding-block:24px 30px}
+#ag-captura.thanks-page .signup-steps{margin-bottom:24px}
+#ag-captura.thanks-page .thanks-stage h1{font-size:clamp(38px,4.2vw,60px);margin-bottom:14px}
+#ag-captura.thanks-page .thanks-stage__lead{margin-bottom:18px;font-size:17px}
+#ag-captura.thanks-page .group-card{padding:20px 34px 22px}
+#ag-captura.thanks-page .group-card__icon{width:32px;height:32px;margin-bottom:5px}
+#ag-captura.thanks-page .group-card h2{font-size:27px;margin-bottom:8px}
+#ag-captura.thanks-page .group-card>p{font-size:15px;margin-bottom:16px}
+#ag-captura.thanks-page .group-card__hint{font-size:13px;margin-top:12px}
+#ag-captura.thanks-page .thanks-date{margin-top:18px}
+@media(max-width:700px){
+#ag-captura.thanks-page{overflow:auto}
+#ag-captura.thanks-page .thanks-header{height:78px;min-height:78px;padding:12px}
+#ag-captura.thanks-page main,#ag-captura.thanks-page .thanks-stage{min-height:calc(100dvh - 78px)}
+#ag-captura.thanks-page .thanks-stage__inner{width:min(100% - 28px,760px);padding-block:18px 22px}
+#ag-captura.thanks-page .signup-steps{margin-bottom:18px}
+#ag-captura.thanks-page .thanks-stage .eyebrow{font-size:11px;margin-bottom:8px}
+#ag-captura.thanks-page .thanks-stage h1{font-size:clamp(34px,10vw,46px);line-height:1.06;margin-bottom:10px}
+#ag-captura.thanks-page .thanks-stage__lead{font-size:14px;line-height:1.45;margin-bottom:12px}
+#ag-captura.thanks-page .group-card{padding:16px 18px 17px}
+#ag-captura.thanks-page .group-card__icon{width:28px;height:28px}
+#ag-captura.thanks-page .group-card h2{font-size:23px}
+#ag-captura.thanks-page .group-card>p{font-size:13px;line-height:1.45;margin-bottom:12px}
+#ag-captura.thanks-page .group-card .button{min-height:52px}
+#ag-captura.thanks-page .group-card__hint{font-size:12px;margin-top:9px}
+#ag-captura.thanks-page .thanks-date{margin-top:12px}
 }
 @media(max-width:1000px){
 #ag-captura .offer__grid{gap:50px}
@@ -633,7 +664,6 @@ body:has(#ag-captura) .wpp-btn{display:none!important}
       <h2 id="ag-captura-modal-title">Entre para a <em>lista especial.</em></h2>
       <p>Preencha seus dados e siga para o grupo da Black Friday.</p>
       <form id="ag-captura-signup-form" action="/black2026-obrigado/">
-        <label for="ag-captura-name">Seu nome</label><input id="ag-captura-name" name="name" maxlength="120" type="text" autocomplete="name" placeholder="Como podemos chamar você?" required>
         <label for="ag-captura-email">Seu melhor e-mail</label><input id="ag-captura-email" name="email" maxlength="254" type="email" autocomplete="email" placeholder="voce@exemplo.com" required>
         <label for="ag-captura-phone">Seu WhatsApp</label><input id="ag-captura-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(00) 00000-0000" required>
         <button class="button button--wine" type="submit" disabled>Continuar <span aria-hidden="true">↗</span></button>
@@ -678,7 +708,7 @@ body:has(#ag-captura) .wpp-btn{display:none!important}
     document.body.style.overflow = 'hidden';
     modal.hidden = false;
     modal.showModal();
-    $('#ag-captura-name').focus();
+    $('#ag-captura-email').focus();
   }));
   root.querySelectorAll('[data-close-form]').forEach(button => on(button, 'click', close));
   on(modal, 'cancel', event => { event.preventDefault(); close(); });
@@ -700,7 +730,6 @@ body:has(#ag-captura) .wpp-btn{display:none!important}
       return;
     }
     const payload = new URLSearchParams({
-      [root.dataset.entryName]: String(fields.get('name') || '').trim(),
       [root.dataset.entryEmail]: String(fields.get('email') || '').trim(),
       [root.dataset.entryPhone]: digits
     });
