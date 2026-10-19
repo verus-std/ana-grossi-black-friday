@@ -605,7 +605,7 @@ body:has(#ag-captura) .wpp-btn{display:none!important}
         <div class="offer-card">
           <p class="offer-card__top">A CONDIÇÃO ESPECIAL VEM AÍ</p>
           <h3>A condição especial<br>da Black Friday.</h3>
-          <div class="price-line"><span>Comprando os conteúdos separadamente</span><s>R$ 1.498,00</s><small>Por apenas 1 ano de acesso</small></div>
+          <div class="price-line"><span>Comprando os conteúdos separadamente</span><s>R$ 1.478,00</s><small>Por apenas 1 ano de acesso</small></div>
           <div class="price-line price-line--special"><span class="price-line__label">NA BLACK FRIDAY</span><strong><span aria-hidden="true">∞</span> Acesso vitalício</strong><p>Todos os cursos atuais e futuros.<br><b>Para sempre.</b></p><span class="price-line__reveal">Valor especial revelado em<br><b>04 de novembro, às 20h</b></span></div>
           <p class="offer-card__note">Entre na lista para receber a condição especial da Black Friday.</p>
           <button class="button button--wine" data-open-form>Quero garantir meu acesso <span aria-hidden="true">↗</span></button>
