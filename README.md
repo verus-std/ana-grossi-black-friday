@@ -12,6 +12,14 @@ O convite do WhatsApp deve ser preenchido na constante `whatsappGroupUrl` em `ob
 
 Para visualizar localmente: `python3 -m http.server 8000` e acesse `http://localhost:8000`.
 
+## Página de vendas
+
+`vendas.html` (com `vendas.css` e `vendas.js`) é o protótipo da página de vendas da Black Friday, no mesmo visual da captura. Acesse em `http://localhost:8000/vendas.html`.
+
+- Preço à vista, número de parcelas e valor da parcela continuam como `[VALOR]`, `[X]` e `[VALOR DA PARCELA]` até serem definidos.
+- O link do checkout vai na constante `checkoutUrl` em `vendas.js`. Enquanto estiver vazio, os botões rolam até o bloco de preço.
+- O cronômetro usa `offerEnd` em `vendas.js` (provisório: 30/11/2026, 23h59, horário de Brasília).
+
 ## Primeira versão
 
 A primeira versão publicada (commit `368be0a`) está preservada em `/versao-antiga/`, com seus próprios estilos, scripts, imagens e página de obrigado.
