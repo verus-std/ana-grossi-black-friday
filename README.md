@@ -14,7 +14,7 @@ Para visualizar localmente: `python3 -m http.server 8000` e acesse `http://local
 
 ## Página de vendas
 
-`vendas.html` (com `vendas.css` e `vendas.js`) é o protótipo da página de vendas da Black Friday, no mesmo visual da captura. Acesse em `http://localhost:8000/vendas.html`.
+`vendas.html` (com `vendas.css` e `vendas.js`) é o protótipo da página de vendas da Black Friday. Usa a mesma estrutura da captura, com paleta própria em preto e dourado. Acesse em `http://localhost:8000/vendas.html`.
 
 - Preço: R$ 697,00 à vista ou 12x de R$ 72,09.
 - Checkout (Hotmart): https://pay.hotmart.com/W108101263E?off=xq0rmqiq, na constante `checkoutUrl` em `vendas.js`.
