@@ -49,10 +49,10 @@ h2 em{font-style:normal;color:var(--accent)}
 /* 1ª dobra */
 .hero{position:relative;color:#fff;background:var(--wine-deep);overflow:hidden}
 .hero__image,.hero__shade{position:absolute;inset:0}
-.hero__image{background:url('assets/hero-ana.jpg') center top/cover no-repeat}
-.hero__shade{background:linear-gradient(90deg,#0a0607 0%,rgba(10,6,7,.92) 30%,rgba(10,6,7,.55) 55%,rgba(10,6,7,.25) 78%,rgba(10,6,7,.45) 100%),linear-gradient(0deg,#0a0607 0%,rgba(10,6,7,.5) 22%,transparent 50%),linear-gradient(180deg,rgba(10,6,7,.7) 0%,transparent 25%),rgba(10,6,7,.25)}
-.hero__inner{position:relative;z-index:2;min-height:960px;padding-block:96px 190px;display:flex;align-items:center}
-.hero__content{width:660px;max-width:57%}
+.hero__image{background:url('assets/hero-vendas.webp') right bottom/auto min(100%,48vw) no-repeat}
+.hero__shade{background:linear-gradient(90deg,#0a0607 0%,rgba(10,6,7,.9) 32%,rgba(10,6,7,.35) 50%,transparent 62%),linear-gradient(0deg,#0a0607 0%,rgba(10,6,7,.4) 16%,transparent 34%),linear-gradient(180deg,rgba(10,6,7,.6) 0%,transparent 18%)}
+.hero__inner{position:relative;z-index:2;min-height:900px;padding-block:80px 170px;display:flex;align-items:center}
+.hero__content{width:600px;max-width:48%}
 .hero__logo{width:411px;margin-bottom:34px}
 .hero__title{font:800 clamp(46px,3.9vw,62px)/1.08 var(--font-head);letter-spacing:-.055em;text-transform:uppercase;color:var(--highlight);margin:0 0 24px}
 .hero__lead{font:400 24px/1.35 var(--font-head);letter-spacing:-.025em;color:#f4ece8;margin:0 0 26px}
@@ -155,7 +155,7 @@ h2 em{font-style:normal;color:var(--accent)}
 
 /* Responsivo */
 @media(max-width:1100px){
-  .hero__content{max-width:60%}
+  .hero__content{max-width:52%}
   .hero .button{min-width:0;width:100%}
   .course-grid{grid-template-columns:repeat(2,1fr)}
   .offer__grid,.library__head,.about__grid{gap:44px}
@@ -188,7 +188,7 @@ h2 em{font-style:normal;color:var(--accent)}
   .hero__lead{font-size:19px}
   .hero__support{font-size:18px;padding-left:16px}
   .hero__support .hero__forever{font-size:28px}
-  .hero__image{position:relative;inset:auto;order:1;height:400px;background-size:auto 400px;background-position:69% center}
+  .hero__image{position:relative;inset:auto;order:1;height:370px;background-size:auto 370px;background-position:74% center}
   .hero__image::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#0a0607 0%,rgba(10,6,7,.35) 25%,rgba(10,6,7,.3) 65%,#0a0607 100%),linear-gradient(90deg,rgba(10,6,7,.5),transparent 40%,transparent 70%,rgba(10,6,7,.5))}
   .hero__shade{display:none}
   .section-divider--hero{order:2;position:relative;margin-top:-1px}
