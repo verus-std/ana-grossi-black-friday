@@ -1,5 +1,5 @@
-// Link do checkout. Enquanto estiver vazio, os botões levam até o bloco de preço.
-const checkoutUrl = '';
+// Link do checkout (Hotmart). Se ficar vazio, os botões levam até o bloco de preço.
+const checkoutUrl = 'https://pay.hotmart.com/W108101263E?off=xq0rmqiq';
 
 // Fim da oferta (horário de Brasília). Ajustar quando a data for definida.
 const offerEnd = new Date('2026-11-30T23:59:59-03:00').getTime();
