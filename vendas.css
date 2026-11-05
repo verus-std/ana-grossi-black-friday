@@ -39,7 +39,7 @@ h2 em{font-style:normal;color:var(--gold)}
 .section-divider{position:absolute;left:0;bottom:-1px;width:100%;aspect-ratio:1920/115;background:center/100% 100% no-repeat;pointer-events:none;z-index:1}
 .section-divider--charcoal{background-image:url('assets/divisor-charcoal.svg')}
 .section-divider--black{background-image:url('assets/divisor-black.svg')}
-.offer,.library,.about{padding-bottom:180px}
+.offer,.library{padding-bottom:180px}
 
 /* 1ª dobra */
 .hero{position:relative;color:#fff;background:var(--black);overflow:hidden}
@@ -165,7 +165,7 @@ h2 em{font-style:normal;color:var(--gold)}
 @media(max-width:700px){
   .shell{width:min(100% - 36px,1200px)}
   .section{padding:72px 0}
-  .offer,.library,.about{padding-bottom:110px}
+  .offer,.library{padding-bottom:110px}
   .section-divider{position:relative;order:2;margin-top:-1px}
   .section .section-divider{position:absolute;margin:0}
   .button{font-size:16px;padding-inline:20px;width:100%}
