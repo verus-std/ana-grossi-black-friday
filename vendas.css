@@ -13,8 +13,6 @@ img{display:block;max-width:100%;height:auto}
 a{color:inherit;text-decoration:none}
 .shell{width:min(100% - 64px,1200px);margin-inline:auto}
 .section{padding:120px 0;position:relative}
-/* Linha dourada entre seções */
-.section::before{content:"";position:absolute;top:0;left:50%;width:min(1200px,100% - 64px);height:1px;transform:translateX(-50%);background:linear-gradient(90deg,transparent,#e6bf7880,transparent)}
 .eyebrow{font:800 14px/1.5 var(--font-head);letter-spacing:.16em;color:var(--gold);margin:0 0 20px}
 h1,h2,h3{font-family:var(--font-head)}
 h2{font-weight:700;font-size:clamp(36px,3.8vw,56px);line-height:1.15;letter-spacing:-.055em;margin:0;color:#fff}
@@ -36,8 +34,12 @@ h2 em{font-style:normal;color:var(--gold)}
 .countdown__item small{font-size:12px;margin-top:4px;font-weight:600}
 .countdown__colon{font-size:20px;align-self:flex-start;line-height:26px;opacity:.6}
 
-/* Os divisores curvos são da captura; aqui não são usados. */
-.section-divider{display:none}
+/* Divisor curvo da captura, recolorido com contorno dourado. Fica no fim
+   de cada seção, na cor da seção seguinte. */
+.section-divider{position:absolute;left:0;bottom:-1px;width:100%;aspect-ratio:1920/115;background:center/100% 100% no-repeat;pointer-events:none;z-index:1}
+.section-divider--charcoal{background-image:url('assets/divisor-charcoal.svg')}
+.section-divider--black{background-image:url('assets/divisor-black.svg')}
+.offer,.library,.about{padding-bottom:180px}
 
 /* 1ª dobra */
 .hero{position:relative;color:#fff;background:var(--black);overflow:hidden}
@@ -163,7 +165,9 @@ h2 em{font-style:normal;color:var(--gold)}
 @media(max-width:700px){
   .shell{width:min(100% - 36px,1200px)}
   .section{padding:72px 0}
-  .section::before{width:calc(100% - 36px)}
+  .offer,.library,.about{padding-bottom:110px}
+  .section-divider{position:relative;order:2;margin-top:-1px}
+  .section .section-divider{position:absolute;margin:0}
   .button{font-size:16px;padding-inline:20px;width:100%}
   .announcement__inner{flex-direction:column;gap:8px;padding-block:10px;min-height:0}
   .announcement__label{font-size:12px}
