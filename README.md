@@ -18,7 +18,7 @@ Para visualizar localmente: `python3 -m http.server 8000` e acesse `http://local
 
 - Preço: R$ 697,00 à vista ou 12x de R$ 72,09.
 - Checkout (Hotmart): https://pay.hotmart.com/W108101263E?off=xq0rmqiq, na constante `checkoutUrl` em `vendas.js`.
-- O cronômetro usa `offerEnd` em `vendas.js` (provisório: 30/11/2026, 23h59, horário de Brasília).
+- O cronômetro usa `offerEnd` em `vendas.js` (12/11/2026, 23h59, horário de Brasília).
 
 ## Primeira versão
 
