@@ -49,8 +49,8 @@ h2 em{font-style:normal;color:var(--accent)}
 /* 1ª dobra */
 .hero{position:relative;color:#fff;background:var(--wine-deep);overflow:hidden}
 .hero__image,.hero__shade{position:absolute;inset:0}
-.hero__image{background:url('assets/hero-vendas.webp') right bottom/auto min(100%,48vw) no-repeat}
-.hero__shade{background:linear-gradient(90deg,#0a0607 0%,rgba(10,6,7,.9) 32%,rgba(10,6,7,.35) 50%,transparent 62%),linear-gradient(0deg,#0a0607 0%,rgba(10,6,7,.4) 16%,transparent 34%),linear-gradient(180deg,rgba(10,6,7,.6) 0%,transparent 18%)}
+.hero__image{background:url('assets/hero-vendas.webp?v=2') center/cover no-repeat}
+.hero__shade{background:linear-gradient(90deg,rgba(10,6,7,.75) 0%,rgba(10,6,7,.4) 35%,transparent 55%),linear-gradient(0deg,#0a0607 0%,transparent 22%)}
 .hero__inner{position:relative;z-index:2;min-height:900px;padding-block:80px 170px;display:flex;align-items:center}
 .hero__content{width:600px;max-width:48%}
 .hero__logo{width:411px;margin-bottom:34px}
@@ -188,7 +188,7 @@ h2 em{font-style:normal;color:var(--accent)}
   .hero__lead{font-size:19px}
   .hero__support{font-size:18px;padding-left:16px}
   .hero__support .hero__forever{font-size:28px}
-  .hero__image{position:relative;inset:auto;order:1;height:370px;background-size:auto 370px;background-position:74% center}
+  .hero__image{position:relative;inset:auto;order:1;height:380px;background-size:auto 440px;background-position:91% 52%}
   .hero__image::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#0a0607 0%,rgba(10,6,7,.35) 25%,rgba(10,6,7,.3) 65%,#0a0607 100%),linear-gradient(90deg,rgba(10,6,7,.5),transparent 40%,transparent 70%,rgba(10,6,7,.5))}
   .hero__shade{display:none}
   .section-divider--hero{order:2;position:relative;margin-top:-1px}
@@ -222,3 +222,6 @@ h2 em{font-style:normal;color:var(--accent)}
   .footer__logo{width:240px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+/* Evita palavra sozinha na última linha (viúva). */
+h1,h2,h3,.offer__highlight,.library__subtitle{text-wrap:balance}
+p{text-wrap:pretty}
